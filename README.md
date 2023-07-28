@@ -71,7 +71,7 @@ npm start
 
 <h2>👨‍💻 Author</h2>
 
-GitHub: [rishabhanand181](https://github.com/inulute)
+GitHub: [inulute](https://github.com/inulute)
 
 <h2>📄 License</h2>
 
