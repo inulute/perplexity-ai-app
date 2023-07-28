@@ -20,7 +20,7 @@
 
 <h2>📦 Releases</h2>
 
-You can download the latest releases for Windows, macOS, and Linux from the release section.
+You can download the latest releases for Windows from the release section.
 
 <p align="center">
   <p align="center">
