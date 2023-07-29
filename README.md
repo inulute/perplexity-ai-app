@@ -24,8 +24,8 @@ You can download the latest releases for Windows from the release section.
 
 <p align="center">
   <p align="center">
-  <a href="https://github.com/inulute/perplexity-ai-app/releases/tag/v0.1.0">
-    <img src="https://img.shields.io/badge/Latest%20Release-v0.1.0-blue?style=for-the-badge" alt="Latest Release">
+  <a href="https://github.com/inulute/perplexity-ai-app/releases/tag/v0.1.1">
+    <img src="https://img.shields.io/badge/Latest%20Release-v0.1.1-blue?style=for-the-badge" alt="Latest Release">
   </a> &nbsp;
   <a href="https://github.com/inulute/perplexity-ai-app/blob/master/LICENSE">
     <img src="https://img.shields.io/github/license/inulute/perplexity-ai-app?style=for-the-badge" alt="License">
@@ -73,7 +73,7 @@ npm start
 
 GitHub: [inulute](https://github.com/inulute)
 
-<h2>📄 License</h2>
+<h2>🗃️ License</h2>
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
