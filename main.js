@@ -1,18 +1,11 @@
 const { app, BrowserWindow, dialog } = require("electron");
 
 app.allowRendererProcessReuse = true;
-
 app.on("ready", () => {
   const mainWindow = new BrowserWindow();
-
-  // Hide the top menu bar
   mainWindow.setMenu(null);
 
-  mainWindow.loadURL(`file://${__dirname}/index.html`, {
-    userAgent:
-      "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36",
-  });
-
+  // Load HTTPS URLs
   const promptObject = {
     type: "question",
     title: "Choose an AI to navigate",
