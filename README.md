@@ -24,8 +24,8 @@ You can download the latest releases for Windows from the release section.
 
 <p align="center">
   <p align="center">
-  <a href="https://github.com/inulute/perplexity-ai-app/releases/tag/v0.1.1">
-    <img src="https://img.shields.io/badge/Latest%20Release-v0.1.1-blue?style=for-the-badge" alt="Latest Release">
+  <a href="https://github.com/inulute/perplexity-ai-app/releases/tag/v1.0.0">
+    <img src="https://img.shields.io/badge/Latest%20Release-v1.0.0-blue?style=for-the-badge" alt="Latest Release">
   </a> &nbsp;
   <a href="https://github.com/inulute/perplexity-ai-app/blob/master/LICENSE">
     <img src="https://img.shields.io/github/license/inulute/perplexity-ai-app?style=for-the-badge" alt="License">
@@ -69,9 +69,23 @@ npm install
 npm start
 ```
 
-<h2>👨‍💻 Author</h2>
+## Support and Donations ❣️
 
-GitHub: [inulute](https://github.com/inulute)
+<div align=center>
+<img src="assets/payment/dunno2.svg" alt="Dunno" width="80"/> 
+
+</div>
+
+If you find this project helpful, consider supporting us by making a donation. Your contributions help maintain and improve Perplexity AI Desktop App.
+
+<div align="center">
+  <a href="https://ko-fi.com/inulute"><img height='41' src='https://az743702.vo.msecnd.net/cdn/kofi3.png?v=0' alt='Buy Me a Coffee at ko-fi.com'></a>
+  <a href="https://paypal.me/inulute"><img src="assets/payment/paypal.svg" alt="PayPal" height="41" width="174"></a>
+  <a href="https://upi-inulute.vercel.app/"><img src="assets/payment/upi.svg" alt="UPI Pay" height="41" width="174"></a>
+</div>
+
+> [!NOTE]  
+> UPI is only available for Indian users.
 
 <h2>🗃️ License</h2>
 
@@ -81,10 +95,18 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 A big thank you to the open-source community for providing amazing tools and libraries that made this project possible.
 
-Note: This application is not affiliated with the official Perplexity AI project but is an independent endeavor that brings the magic of AI language processing to your desktop.
+> [!NOTE]
+>This application is not affiliated with the official Perplexity AI project but is an independent endeavor that brings the magic of AI language processing to your desktop.
 
 <h2>📢 Feedback and Contributions</h2>
 
 We warmly welcome your feedback and contributions to improve the Perplexity AI Desktop App. If you encounter any issues or have ideas for enhancements, please submit them through GitHub issues or create a pull request. 😊
 
 ---
+
+&nbsp;
+<div align="center">
+
+  [![Made with ❤️ by inulute](https://img.shields.io/badge/Made%20with-%E2%9D%A4%EF%B8%8F%20by%20inulute-black?style=flat-square)](https://inulute.github.io/linkme/)
+
+</div>
