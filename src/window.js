@@ -3,7 +3,7 @@ const { BrowserWindow } = require("electron");
 
 exports.createBrowserWindow = () => {
   return new BrowserWindow({
-    width: 1024,
+    width: 1000,
     height: 768,
     minWidth: 400, 
     minHeight: 600,
