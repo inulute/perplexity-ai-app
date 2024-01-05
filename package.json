@@ -1,8 +1,8 @@
 {
   "name": "perplexity-ai-app",
   "productName": "Perplexity AI",
-  "version": "1.1.0",
-  "description": "Perplexity AI desktop application built with Electron.",
+  "version": "2.0.0",
+  "description": "Perplexity AI desktop application by inulute.",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
@@ -33,25 +33,12 @@
     },
     "win": {
       "target": "nsis",
-      "icon": "assets/icons/win/icon.ico"
+      "icon": "assets/icons/win/win.ico"
     },
     "linux": {
       "target": "AppImage",
-      "icon": "assets/icons/png/favicon.png"
-    },
-    "dmg": {
-      "contents": [
-        {
-          "x": 130,
-          "y": 220
-        },
-        {
-          "x": 410,
-          "y": 220,
-          "type": "link",
-          "path": "/Applications"
-        }
-      ]
-    }
+      "icon": "assets/icons/png/favicon.png",
+      "category": "Utility"
+    }    
   }
 }
