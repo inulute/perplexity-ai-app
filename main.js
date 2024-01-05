@@ -1,58 +1,44 @@
-const { app, BrowserWindow, dialog } = require("electron");
+const { app, BrowserWindow } = require("electron");
 const path = require("path");
 
 app.allowRendererProcessReuse = true;
 
 let mainWindow;
-let dialogWindow;
+
 
 app.on("ready", () => {
-  const window = require("./src/window");
-  mainWindow = window.createBrowserWindow(app);
-  mainWindow.setMenu(null);
+  // Create BrowserWindow for the main application
+  mainWindow = new BrowserWindow({
+    width: 1000,
+    height: 758,
+    backgroundColor: "#272829",
+    webPreferences: {
+      preload: path.join(__dirname, "preload.js"),
+      nodeIntegration: false,
+      contextIsolation: true,
+    }, // Hide window frame (including menu bar)
+    autoHideMenuBar: true,
+  });
 
-  const createCustomDialog = () => {
-    dialogWindow = new BrowserWindow({
-      parent: mainWindow,
-      modal: true,
-      show: false,
-      width: 400,
-      height: 570,
-      backgroundColor: "#272829",
-      webPreferences: {
-        preload: path.join(__dirname, "preload.js"),
-        nodeIntegration: false,
-        contextIsolation: true,
-      },
-    });
+  // Load your initial HTML file
+  mainWindow.loadFile(path.join(__dirname, "initial.html"));
 
-    // Load HTTPS URLs
-    const promptObject = {
-      type: "question",
-      title: "Choose an AI to navigate",
-      message: "Choose an AI to navigate:",
-      buttons: ["Perplexity AI: AI Search", "Labs Perplexity AI: AI Chat"],
-    };
+  // Check if the current URL requires a redirect
+  mainWindow.webContents.on('did-finish-load', () => {
+    const currentURL = mainWindow.webContents.getURL();
+    
+    // Check if the current URL is the specified one that requires redirection
+    if (currentURL === "https://www.perplexity.ai/auth/verify-request") {
 
-    dialog.showMessageBox(mainWindow, promptObject)
-      .then((response) => {
-        const chosenWebsite = promptObject.buttons[response.response];
-        if (chosenWebsite === "Perplexity AI: AI Search") {
-          mainWindow.loadURL("https://perplexity.ai");
-        } else if (chosenWebsite === "Labs Perplexity AI: AI Chat") {
-          mainWindow.loadURL("https://labs.perplexity.ai");
-        }
-      })
-      .catch((error) => {
-        console.error(error);
-      });
-  };
+        mainWindow.loadFile('./url-open.html');
+    }
+  });
 
-  // Load dialog window on app ready
-  createCustomDialog();
+  // Dialog logic can be included here if needed
 
-  // Rest of your code...
-
+  mainWindow.on("closed", () => {
+    mainWindow = null;
+  });
 });
 
 app.on("window-all-closed", () => {
