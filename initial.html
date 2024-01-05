@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Varela Round' rel='stylesheet'>
+    <link rel="stylesheet" href="./external.css">
+    <title>AI Navigator</title>
+    <!-- Google tag (gtag.js) -->
+<script async src="./analytics.js"></script>
+</head>
+<body>
+    <div id="content">
+        <div id="logo"></div>
+        <h2>Choose an AI to Navigate</h2>
+        <div class="button-container">
+            <a href="https://perplexity.ai/search" class="button">Perplexity AI Search</a>
+            <a href="https://perplexity.ai/chat" class="button" id="chatButton">Perplexity AI Chat</a>
+        </div>
+        <p id="versionDisplay">Current Version: Checking...</p>
+    </div>
+    
+    <footer>
+        Made with ❤️ by <a href="https://github.com/inulute" class="footerinu">inulute</a>
+    </footer>
+
+    <script>
+        function compareVersions(v1, v2) {
+            const parts1 = v1.split('.').map(Number);
+            const parts2 = v2.split('.').map(Number);
+            
+            for (let i = 0; i < Math.max(parts1.length, parts2.length); i++) {
+                const part1 = parts1[i] || 0;
+                const part2 = parts2[i] || 0;
+                
+                if (part1 > part2) return 1;
+                if (part1 < part2) return -1;
+            }
+            
+            return 0;
+        }
+
+        async function checkForUpdates() {
+            const currentVersion = "1.1.0";
+            const rawGithubContentUrl = "https://raw.githubusercontent.com/inulute/perplexity-ai-app/main/package.json";
+            try {
+                const response = await fetch(rawGithubContentUrl);
+                const data = await response.json();
+                const latestVersion = data.version;
+
+                const versionDisplay = document.getElementById("versionDisplay");
+
+                if (compareVersions(latestVersion, currentVersion) === 1) {
+                    versionDisplay.innerHTML = `<a href="https://github.com/inulute/perplexity-ai-app/releases/latest" target="_blank" class="update-available">Update Available! Click here to download the latest version (${latestVersion}).</a>`;
+                } else {
+                    versionDisplay.innerHTML = `<a href="https://donate.inulute.vercel.app" target="_blank" class="update-not-available">Please support us by donating.</a>`;
+                }
+            } catch (error) {
+                console.error("Error fetching version file:", error);
+                document.getElementById("versionDisplay").innerText = "Error checking for updates.";
+            }
+        }
+
+        document.getElementById("chatButton").addEventListener("click", checkForUpdates);
+
+        document.addEventListener("DOMContentLoaded", function () {
+            checkForUpdates(); // Check for updates on page load
+        });
+    </script>
+</body>
+</html>
