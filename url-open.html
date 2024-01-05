@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://fonts.googleapis.com/css?family=Varela Round' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="./external.css">
+  <title>Login</title>
+  <style>
+    body {
+      user-select: none; /* Prevent text selection on the whole body */
+    }
+  </style>
+</head>
+<body>
+  <div id="content">
+    <div id="logo2"></div>
+    <h3>A sign-in link has been sent to your email address</h3>
+    <input type="text" id="url-input" placeholder="Enter URL" onkeydown="handleCtrlA(event)">
+    <div class="button-container">
+      <button class="button" onclick="pasteAndCheck()"><i class="fas fa-paste"></i> Paste</button>
+      <button class="button" onclick="loginAndLoad()"><i class="fas fa-sign-in-alt"></i> Login</button>
+    </div>
+    <div class="instructions">
+        <p>- To sign in, go to your email.</p>
+        <p>- Open the Perplexity login email.</p>
+        <p>- Right-click on the "Sign In" button.</p>
+        <p>- Copy the link and paste it in the text box above.</p>
+    </div>
+    <p id="warning"></p>
+  </div>
+  <script>
+    function focusUrlInput() {
+      var urlInput = document.getElementById("url-input");
+      urlInput.focus();
+    }
+
+    function handleCtrlA(event) {
+      if (event.ctrlKey && event.key === 'a') {
+        event.preventDefault(); // Prevent default Ctrl+A behavior
+        var urlInput = document.getElementById("url-input");
+        urlInput.setSelectionRange(0, urlInput.value.length); // Select the text within the input box
+      }
+    }
+
+    function pasteAndCheck() {
+      var urlInput = document.getElementById("url-input");
+      var warning = document.getElementById("warning");
+      warning.textContent = "";
+      
+      navigator.clipboard.readText()
+        .then((pastedUrl) => {
+          if (pastedUrl.trim() !== "") {
+            urlInput.value = pastedUrl;
+          }
+        })
+        .catch((err) => {
+          console.error('Failed to read clipboard contents: ', err);
+        });
+    }
+
+    function loginAndLoad() {
+  var urlInput = document.getElementById("url-input");
+  var warning = document.getElementById("warning");
+  warning.textContent = "";
+  var expectedPattern = "https://www.perplexity.ai/api/auth/callback/email?callbackUrl";
+  if (!urlInput.value.startsWith(expectedPattern)) {
+    warning.textContent = "Warning: The URL doesn't start with the expected pattern.";
+    return;
+  }
+  console.log("Logging in or loading URL:", urlInput.value);
+
+  // Redirect to the specified URL
+  window.location.href = urlInput.value;
+}
+
+  </script>
+</body>
+</html>
