@@ -1,0 +1,142 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    font-family: 'Varela Round';
+    font-size: 14px;
+    background: #292927 center/cover no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#content {
+    position: absolute;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 80%; /* Adjust the maximum width as needed */
+    width: 400px; /* Allow the container to grow with the screen width */
+    background: #1F1F1D; /* Adjust the opacity as needed */
+    border: 3px solid #353535;
+}
+
+h2 {
+    color: #E8E8E6;
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: #E8E8E6;
+    margin-bottom: 20px;
+}
+h5 {
+    color: #E8E8E6;
+    margin-top: 0%;
+    margin-bottom: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 150;
+}
+
+#versionDisplay {
+    font-size: 0.8em;
+    cursor: pointer;
+    color: white; /* Default text color */
+    text-decoration: underline;
+}
+
+.update-available {
+    color: lightblue; /* Light blue color for the update available message */
+}
+
+.update-not-available {
+    color: rgb(95, 137, 95); /* Light green color for the update not available message */
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #292927; /* Dark background color for the footer */
+    color: white; /* Text color for the footer */
+    text-align: center;
+    padding: 10px;
+    margin-bottom: auto;
+}
+.footerinu {
+    color: lightblue;
+    text-decoration: none;
+}
+
+#logo {
+    width: auto;
+    max-width: 100%;
+    height: 70px;
+    background: url('./assets/icons/png/perplexity.svg') center/contain no-repeat;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+#logo2 {
+    width: auto;
+    max-width: 100%;
+    height: 80px;
+    background: url('./assets/icons/png/Perplexity_check_mail.svg') center/contain no-repeat;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 10px;
+    margin: 10px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+    background-color: transparent;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    width: 40%;
+    align-self: center;
+}
+
+.button:hover {
+    background-color: #2c3e50;
+}
+.user-select {
+    user-select: none; /* Standard */
+}
+
+.instructions {
+    color: #c7c7c7;
+    font-size: 13px;
+    text-align: left;
+    margin-top: 10px;
+}
+
+#url-input {
+    width: 89%;
+    padding: 10px;
+    margin: 10px 10px;
+    border: 1px solid #444;
+    background-color: #333;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 16px;
+    overflow: hidden;
+}
+
+#warning {
+    color: #FF0000;
+    margin-top: 10px;
+    font-size: 14px;
+}
