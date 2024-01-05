@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/icons/png/perplexity.png" alt="Perplexity AI Logo">
+  <img src="https://lh3.googleusercontent.com/drive-viewer/AEYmBYSyKItN5U02sqELRjfl5UYTpOCJeSp7chZ5SyVY-f-mWCXwy927ciEygu1oSf3IQlbG8ZP5JsZ1aQ0_8_Sq7vaLHd4OMQ=s2560" alt="Perplexity AI Logo">
 </p>
 
 <h1 align="center">🚀 Perplexity AI Desktop App 🖥️</h1>
@@ -9,7 +9,7 @@
 </p>
 &nbsp;
 <p align="center">
-  <img src="assets/screenshot/screenshot.png" alt="App Screenshot">
+  <img src="https://lh3.googleusercontent.com/drive-viewer/AEYmBYRs4rmI7pkCvgYJVGjHepvlGx7gHORytEFzZgG67GbatlkIBCgXeK0aDkEoZRoEFuAj-UN2hMvlU1qq6ERRPcS8SoMNdQ=s1600" alt="App Screenshot">
 </p>
 &nbsp;
 <h2>✨ Features</h2>
@@ -72,16 +72,19 @@ npm start
 ## Support and Donations ❣️
 
 <div align=center>
-<img src="assets/payment/dunno2.svg" alt="Dunno" width="80"/> 
+<img src="https://lh3.googleusercontent.com/drive-viewer/AEYmBYSRg3Dm_MkHd54IHa1zOZ7_3iZp0kWoqCkgxzQY_zZU1E0r23gI4YK6DyBP5BplOkD0Ml5ZSTugz0B2QXX_Ch8U1I1OCA=s2560" alt="Dunno" width="80"/> 
 
 </div>
 
 If you find this project helpful, consider supporting us by making a donation. Your contributions help maintain and improve Perplexity AI Desktop App.
 
 <div align="center">
-  <a href="https://ko-fi.com/inulute"><img height='41' src='https://az743702.vo.msecnd.net/cdn/kofi3.png?v=0' alt='Buy Me a Coffee at ko-fi.com'></a>
-  <a href="https://paypal.me/inulute"><img src="assets/payment/paypal.svg" alt="PayPal" height="41" width="174"></a>
-  <a href="https://upi-inulute.vercel.app/"><img src="assets/payment/upi.svg" alt="UPI Pay" height="41" width="174"></a>
+    <a href="https://ko-fi.com/inulute">
+        <img height='41' src='https://az743702.vo.msecnd.net/cdn/kofi3.png?v=0' alt='Buy Me a Coffee at ko-fi.com'></a>
+  <a href="https://paypal.me/inulute"><img src="https://lh3.googleusercontent.com/drive-viewer/AEYmBYTODu3by7XcL633IjmJm6YlKmHzwh0lHYM_BDlmy1hznGt0y4NQ39J8YRkWXoFq8LAz6XVGMm-wTCfXQYkyOidd6Y9p9g=s1600" alt="PayPal" height="38" width="auto"></a>
+  <a href="https://upi-inulute.vercel.app/">
+      <img src="https://lh3.googleusercontent.com/drive-viewer/AEYmBYSkeOpuuC41ftYqUfoJBLZhfHabE3SwZoNatkrYCeORamSRVI4FWG8sRyVHU6VGFsjMmLaVqDXaMx6Y-XWxtHs7ysz3=s1600" alt="UPI Pay" height="38" width="auto">
+  </a> <br>
 </div>
 
 > [!NOTE]  
