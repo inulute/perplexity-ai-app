@@ -22,7 +22,7 @@
     "electron-prompt": "^1.7.0"
   },
   "build": {
-    "appId": "com.perplexityai.app",
+    "appId": "com.inulute.perplexityai",
     "productName": "Perplexity AI",
     "directories": {
       "output": "release-builds"
