@@ -5,9 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://fonts.googleapis.com/css?family=Varela Round' rel='stylesheet'>
     <link rel="stylesheet" href="./external.css">
-    <title>AI Navigator</title>
-    <!-- Google tag (gtag.js) -->
-<script async src="./analytics.js"></script>
+    <script async src="./analytics.js"></script>
 </head>
 <body>
     <div id="content">
@@ -41,7 +39,7 @@
         }
 
         async function checkForUpdates() {
-            const currentVersion = "1.1.0";
+            const currentVersion = "2.0.0"; 
             const rawGithubContentUrl = "https://raw.githubusercontent.com/inulute/perplexity-ai-app/main/package.json";
             try {
                 const response = await fetch(rawGithubContentUrl);
