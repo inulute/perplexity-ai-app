@@ -38,9 +38,9 @@ You can download the latest releases for Windows, Linux and Mac from the release
 
 The Perplexity AI Desktop App offers a seamless browsing experience between two AI platforms:
 
-1. **🌐 perplexity.ai:** Visit the main website for Perplexity AI, where you can explore the latest AI technologies, projects, and research.
+1. **🌐 perplexity.ai:** Visit the main website for Perplexity AI, which is an AI Powered search engine
 
-2. **🧪 labs.perplexity.ai:** Access Perplexity AI Labs, a platform for developers and researchers to collaborate, experiment, and contribute to AI innovations.
+2. **🧪 labs.perplexity.ai:** Access Perplexity AI Labs, a Chat based AI.
 
 <h2>🛠️ Built With</h2>
 
