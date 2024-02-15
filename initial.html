@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://fonts.googleapis.com/css?family=Varela Round' rel='stylesheet'>
     <link rel="stylesheet" href="./external.css">
-    <script async src="./analytics.js"></script>
 </head>
 <body>
     <div id="content">
@@ -39,12 +38,10 @@
         }
 
         async function checkForUpdates() {
-            const currentVersion = "2.0.0"; 
-            const rawGithubContentUrl = "https://raw.githubusercontent.com/inulute/perplexity-ai-app/main/package.json";
             try {
-                const response = await fetch(rawGithubContentUrl);
-                const data = await response.json();
-                const latestVersion = data.version;
+                const currentVersion = await fetch('crrtver.inu').then(response => response.text());
+                const response = await fetch('https://raw.githubusercontent.com/inulute/perplexity-ai-app/main/package.json');
+                const { version: latestVersion } = await response.json();
 
                 const versionDisplay = document.getElementById("versionDisplay");
 
