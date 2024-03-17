@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://lh3.googleusercontent.com/drive-viewer/AEYmBYQ3SgyV50c_CgXADGixJqxgAmp5PAfArBipuo3V6POvLtlm2GPgabK4sC8jGPAtJ9ieodZe4oO_SFn1F5YzSQC7BgpfVA=s2560" alt="Perplexity AI Logo">
+  <img src="./assets/icons/png/perplexitybg.svg" alt="Perplexity AI Logo">
 </p>
 
 <h1 align="center">🚀 Perplexity AI Desktop App 🖥️</h1>
@@ -9,7 +9,7 @@
 </p>
 &nbsp;
 <p align="center">
-  <img src="https://lh3.googleusercontent.com/drive-viewer/AEYmBYQqy98l9gpSRoFefhQBKajfNuj9grvbE-XL_Frai2qd5WVcu_ouNHUCFZPdAt3g-98-ZxFs-Cn3FdsmG3gKVHSBsMl5vQ=s1600" alt="App Screenshot">
+  <img src="./assets/screenshot/screenshot.png" alt="App Screenshot">
 </p>
 &nbsp;
 <h2>✨ Features</h2>
@@ -72,7 +72,7 @@ npm start
 ## Support and Donations ❣️
 
 <div align=center>
-<img src="https://lh3.googleusercontent.com/drive-viewer/AEYmBYS_Bcnlttbh-x04mOek6G2carYaJcScC70fzqnC60Olq_lkZS-uh5iciWMxQm54Hv7lO7bNHKOErdInap3xVwJJhKqpnQ=s2560" alt="Dunno" width="80"/> 
+<img src="./assets/payment/dunno2.svg" alt="Dunno" width="80"/> 
 
 </div>
 
@@ -81,9 +81,9 @@ If you find this project helpful, consider supporting us by making a donation. Y
 <div align="center">
     <a href="https://ko-fi.com/inulute">
         <img height='41' src='https://az743702.vo.msecnd.net/cdn/kofi3.png?v=0' alt='Buy Me a Coffee at ko-fi.com'></a>
-  <a href="https://paypal.me/inulute"><img src="https://lh3.googleusercontent.com/drive-viewer/AEYmBYRi5IwYdDwYiCXDkNOrrn8QMzIwQcNwmaTPRXimVFcxoVv9xa3k73tyvJTjuO6rkxRUh-vEwJQqhs9MBJ8BSTaKWTdlOw=s1600" alt="PayPal" height="38" width="auto"></a>
+  <a href="https://paypal.me/inulute"><img src="./assets/payment/paypal.svg" alt="PayPal" height="38" width="auto"></a>
   <a href="https://upi-inulute.vercel.app/">
-      <img src="https://lh3.googleusercontent.com/drive-viewer/AEYmBYT7iC6oFKQlcKkrivUrY6eLg7z64_vGEgWg_Kko_WHIQUXsXFFpIKvXaiGbin97qetbF4iKgOqcOuxWXdHDv27e-dPO=s1600" alt="UPI Pay" height="38" width="auto">
+      <img src="./assets/payment/upi.svg" alt="UPI Pay" height="38" width="auto">
   </a> <br>
 </div>
 
