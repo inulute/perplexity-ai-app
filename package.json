@@ -1,7 +1,7 @@
 {
   "name": "perplexity-ai-app",
   "productName": "Perplexity AI",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "Perplexity AI desktop application by inulute.",
   "main": "main.js",
   "scripts": {
@@ -15,8 +15,8 @@
   "author": "inulute",
   "license": "MIT",
   "devDependencies": {
-    "electron": "^22.0.0",
-    "electron-builder": "^24.6.3"
+    "electron": "^31.3.0",
+    "electron-builder": "^24.13.3"
   },
   "dependencies": {
     "electron-prompt": "^1.7.0"
@@ -39,6 +39,6 @@
       "target": "AppImage",
       "icon": "assets/icons/png/favicon.png",
       "category": "Utility"
-    }    
+    }
   }
 }

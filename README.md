@@ -5,25 +5,39 @@
 <h1 align="center">🚀 Perplexity AI Desktop App 🖥️</h1>
 
 <p align="center">
-  A beautifully crafted desktop application for Perplexity AI, an advanced artificial intelligence (AI) platform created by Meta AI and brought to life by the Perplexity team. The app is built using Electron, offering seamless navigation between 🌐 "perplexity.ai" and 🧪 "labs.perplexity.ai".
+  A beautifully crafted desktop application for Perplexity AI, an advanced artificial intelligence (AI) platform created and brought to life by the Perplexity team. This app provides seamless navigation between 🌐 <b>perplexity.ai</b> and 🧪 <b>labs.perplexity.ai</b>.
 </p>
-&nbsp;
+
+<p align="center">
+  <a href="https://www.pling.com/p/2107698/">
+    <img src="https://img.shields.io/badge/Download-Latest-green?style=for-the-badge" alt="Latest Release">
+  </a>
+</p>
+
 <p align="center">
   <img src="./assets/screenshot/screenshot.png" alt="App Screenshot">
 </p>
-&nbsp;
-<h2>✨ Features</h2>
 
-- Choose between 🌐 "perplexity.ai" and 🧪 "labs.perplexity.ai" websites.
-- Intuitive user interface designed for simplicity and ease of use.
-- Built using Electron for cross-platform compatibility.
+<h2>✨ Features</h2>
+<ul>
+  <li><b>Website Navigation:</b> Choose between 🌐 <b>perplexity.ai</b> and 🧪 <b>labs.perplexity.ai</b>.</li>
+  <li><b>User-Friendly Interface:</b> Designed for simplicity and ease of use.</li>
+  <li><b>Cross-Platform Compatibility:</b> Built with Electron to work seamlessly on multiple platforms.</li>
+  <li><b>Keyboard Shortcuts:</b>
+    <ul>
+      <li><b>CmdOrCtrl+6:</b> Open or restore the Perplexity AI window.</li>
+      <li><b>CmdOrCtrl+7:</b> Open or restore the Perplexity Labs window.</li>
+      <li><b>CmdOrCtrl+M:</b> Minimize or restore all windows.</li>
+    </ul>
+  </li>
+</ul>
 
 <h2>📦 Releases</h2>
-
-You can download the latest releases for Windows, Linux and Mac from the release section.
+<p>
+  Download the latest releases for Windows, Linux, and Mac from the <a href="https://github.com/inulute/perplexity-ai-app/releases">releases section</a>.
+</p>
 
 <p align="center">
-  <p align="center">
   <a href="https://www.pling.com/p/2107698/">
     <img src="https://img.shields.io/badge/Download-Latest-blue?style=for-the-badge" alt="Latest Release">
   </a> &nbsp;
@@ -31,85 +45,75 @@ You can download the latest releases for Windows, Linux and Mac from the release
     <img src="https://img.shields.io/github/license/inulute/perplexity-ai-app?style=for-the-badge" alt="License">
   </a>
 </p>
+
+<h2>📚 Content</h2>
+<p>
+  The Perplexity AI Desktop App provides a seamless browsing experience between:
+</p>
+<ol>
+  <li><b>🌐 perplexity.ai:</b> Access the main website for Perplexity AI, an AI-powered search engine.</li>
+  <li><b>🧪 labs.perplexity.ai:</b> Explore Perplexity AI Labs, a chat-based AI.</li>
+</ol>
+
+<h2>💡 Support and Donations ❣️</h2>
+<p>
+  If you find this project helpful, consider supporting us by making a donation. Your contributions help maintain and improve the Perplexity AI Desktop App.
+</p>
+
+<p align="center">
+  <a href="https://ko-fi.com/inulute">
+    <img height='41' src='https://az743702.vo.msecnd.net/cdn/kofi3.png?v=0' alt='Buy Me a Coffee at ko-fi.com'>
+  </a>
+  <a href="https://paypal.me/inulute">
+    <img src="./assets/payment/paypal.svg" alt="PayPal" height="38" width="auto">
+  </a>
+  <a href="https://upi-inulute.vercel.app/">
+    <img src="./assets/payment/upi.svg" alt="UPI Pay" height="38" width="auto">
   </a>
 </p>
-</p>
-<h2>📚 Content</h2>
-
-The Perplexity AI Desktop App offers a seamless browsing experience between two AI platforms:
-
-1. **🌐 perplexity.ai:** Visit the main website for Perplexity AI, which is an AI Powered search engine
-
-2. **🧪 labs.perplexity.ai:** Access Perplexity AI Labs, a Chat based AI.
-
-<h2>🛠️ Built With</h2>
-
-- [Electron](https://www.electronjs.org/) - The framework for building cross-platform desktop apps.
-
-<h2>🚀 Run Locally</h2>
-
-To run the Perplexity AI Desktop App locally on your machine, follow these simple steps:
-
-1. **Clone this repository:**
-
-```bash
-git clone https://github.com/inulute/perplexity-ai-app.git
-cd perplexity-ai-app
-```
-
-2. **Install dependencies:**
-
-```bash
-npm install
-```
-
-3. **Run the app:**
-
-```bash
-npm start
-```
-
-## Support and Donations ❣️
-
-<div align=center>
-<img src="./assets/payment/dunno2.svg" alt="Dunno" width="80"/> 
-
-</div>
-
-If you find this project helpful, consider supporting us by making a donation. Your contributions help maintain and improve Perplexity AI Desktop App.
-
-<div align="center">
-    <a href="https://ko-fi.com/inulute">
-        <img height='41' src='https://az743702.vo.msecnd.net/cdn/kofi3.png?v=0' alt='Buy Me a Coffee at ko-fi.com'></a>
-  <a href="https://paypal.me/inulute"><img src="./assets/payment/paypal.svg" alt="PayPal" height="38" width="auto"></a>
-  <a href="https://upi-inulute.vercel.app/">
-      <img src="./assets/payment/upi.svg" alt="UPI Pay" height="38" width="auto">
-  </a> <br>
-</div>
 
 > [!NOTE]  
 > UPI is only available for Indian users.
 
 <h2>🗃️ License</h2>
+<p>
+  This project is licensed under the MIT License. See the <a href="LICENSE">LICENSE</a> file for details.
+</p>
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-<h2> Acknowledgments</h2>
-
-A big thank you to the open-source community for providing amazing tools and libraries that made this project possible.
+<h2>🙌 Acknowledgments</h2>
+<p>
+  A big thank you to the open-source community for providing amazing tools and libraries that made this project possible.
+</p>
 
 > [!NOTE]
->This application is not affiliated with the official Perplexity AI project but is an independent endeavor that brings the magic of AI language processing to your desktop.
+> This application is not affiliated with the official Perplexity AI project but is an independent endeavor that brings the magic of AI language processing to your desktop.
 
 <h2>📢 Feedback and Contributions</h2>
-
-We warmly welcome your feedback and contributions to improve the Perplexity AI Desktop App. If you encounter any issues or have ideas for enhancements, please submit them through GitHub issues or create a pull request. 😊
+<p>
+  We warmly welcome your feedback and contributions to improve the Perplexity AI Desktop App. If you encounter any issues or have ideas for enhancements, please submit them through GitHub issues or create a pull request. 😊
+</p>
 
 ---
 
-&nbsp;
 <div align="center">
-
-  [![Made with ❤️ by inulute](https://img.shields.io/badge/Made%20with-%E2%9D%A4%EF%B8%8F%20by%20inulute-black?style=flat-square)](https://inulute.github.io/linkme/)
-
+  <p><b>Made with ❤️ by</b></p>
+  <a href="https://inulute.com/">
+    <img src="./assets/inulute/inulute.svg" alt="Made with love by Inulute" width="70px">
+  </a>
 </div>
+
+<h2>🌐 Connect with Us</h2>
+<p align="center">
+  <a href="https://twitter.com/inulute">
+    <img src="https://img.shields.io/badge/Twitter-%40inulute-blue?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter">
+  </a>
+  <a href="https://linkedin.com/company/inulute">
+    <img src="https://img.shields.io/badge/LinkedIn-%40inulute-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
+  </a>
+  <a href="https://github.com/inulute">
+    <img src="https://img.shields.io/badge/GitHub-%40inulute-black?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
+  </a>
+  <a href="https://instagram.com/inulute">
+    <img src="https://img.shields.io/badge/Instagram-%40inulute-orange?style=for-the-badge&logo=instagram&logoColor=white" alt="GitHub">
+  </a>
+</p>

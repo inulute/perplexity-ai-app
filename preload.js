@@ -1,11 +1,9 @@
-const { contextBridge, ipcRenderer } = require("electron");
+const win = new BrowserWindow({
 
-contextBridge.exposeInMainWorld("electron", {
-  print: async (arg) => {
-    try {
-      await ipcRenderer.invoke("print", arg);
-    } catch (error) {
-      console.error("Error invoking print:", error);
-    }
-  },
+  webPreferences: {
+    preload: path.join(__dirname, 'preload.js'),
+    nodeIntegration: false,
+    contextIsolation: true,
+
+  }
 });
