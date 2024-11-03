@@ -1,13 +1,49 @@
-<html>
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="assets/css/no-topbar.css">
-  <script defer src="assets/js/renderer.js"></script>
   <title>Perplexity AI</title>
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline';">
+  <link rel="stylesheet" href="./src/css/styles.css">
 </head>
 <body>
-  <webview id="webview" autosize="on"></webview>
+  <div id="container">
+    <nav id="sidebar">
+      <a href="#" class="menu-item" onclick="window.electronAPI.switchAITool('https://perplexity.ai')">
+        <img src="./assets/icons/svg/perplexity-ai-icon.svg" alt="Perplexity AI" title="Perplexity AI"/>
+      </a>
+      <a href="#" class="menu-item" onclick="window.electronAPI.switchAITool('https://labs.perplexity.ai')">
+        <img src="./assets/icons/svg/perplexity-labs-icon.svg" alt="Perplexity Labs" title="Perplexity Labs"/>
+      </a>
+      <a href="#" class="menu-item" onclick="window.electronAPI.switchAITool('refresh')">
+        <img src="./assets/icons/svg/refresh-icon.svg" alt="Refresh" title="Refresh"/>
+      </a>
+      <div class="spacer"></div>
+      <a href="#" class="menu-item" onclick="window.electronAPI.switchAITool('https://donate.inulute.com')">
+        <img src="./assets/icons/svg/coffee-icon.svg" alt="Donate" title="Buy me a Coffee"/>
+      </a>
+      <a href="#" class="menu-item" onclick="window.electronAPI.openSettings()">
+        <img src="./assets/icons/svg/settings-icon.svg" alt="Settings" title="Settings"/>
+      </a>
+      <div class="version-display">v{version}</div>
+    </nav>
+    <div id="content">
+      <div id="webview-container">
+      </div>
+      <div id="loading">
+        <div class="spinner"></div>
+      </div>
+    </div>
+  </div>
+  <div id="update-modal" class="modal hidden">
+    <div class="modal-content">
+      <button class="close-button" id="update-close-button">&#x2715;</button>
+      <h2>Update Available</h2>
+      <p>A new version (v<span id="latest-version"></span>) is available.</p>
+      <button id="download-update-button">Download Update</button>
+    </div>
+  </div>
+
+  <script src="./src/js/renderer/renderer.js"></script>
 </body>
 </html>

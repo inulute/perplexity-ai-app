@@ -1,5 +1,3 @@
-.DS_Store
-release-builds/
-node_modules/
-package-lock.json
-crrtver.inu
+node_modules
+release-builds
+obfuscate.js

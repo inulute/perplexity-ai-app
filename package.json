@@ -1,7 +1,7 @@
 {
   "name": "perplexity-ai-app",
   "productName": "Perplexity AI",
-  "version": "2.2.0",
+  "version": "3.0.0",
   "description": "Perplexity AI desktop application by inulute.",
   "main": "main.js",
   "scripts": {
@@ -9,17 +9,20 @@
     "build": "electron-builder",
     "package-mac": "electron-builder --mac",
     "package-win": "electron-builder --win",
-    "package-linux": "electron-builder --linux"
+    "package-linux": "electron-builder --linux",
+    "obfuscate": "node obfuscate.js"
   },
   "repository": "https://github.com/inulute/perplexity-ai-app",
   "author": "inulute",
-  "license": "MIT",
-  "devDependencies": {
-    "electron": "^31.3.0",
-    "electron-builder": "^24.13.3"
-  },
+  "license": "GPL-3.0-only",
   "dependencies": {
-    "electron-prompt": "^1.7.0"
+    "electron-store": "^7.0.3"
+  },
+  "devDependencies": {
+    "csso": "^5.0.5",
+    "electron": "^33.0.2",
+    "electron-builder": "^25.1.8",
+    "javascript-obfuscator": "^4.1.1"
   },
   "build": {
     "appId": "com.inulute.perplexityai",
@@ -29,15 +32,16 @@
     },
     "mac": {
       "category": "your.app.Productivity",
-      "icon": "assets/icons/mac/favicon.icns"
+      "icon": "./assets/icons/mac/favicon.icns"
     },
     "win": {
       "target": "nsis",
-      "icon": "assets/icons/win/win.ico"
+      "icon": "./assets/icons/win/icon.ico",
+      "sign": false
     },
     "linux": {
       "target": "AppImage",
-      "icon": "assets/icons/png/favicon.png",
+      "icon": "./assets/icons/png/favicon.png",
       "category": "Utility"
     }
   }

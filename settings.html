@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Settings</title>
+  <link rel="stylesheet" href="./src/css/settings.css">
+</head>
+<body>
+  <div id="settings-container">
+    <div class="settings-header">
+      <img src="./assets/icons/svg/settings-icon.svg" alt="Settings Icon" class="settings-icon">
+      <h2>Settings</h2>
+      <button class="close-button" onclick="closeSettings()">&#x2715;</button>
+    </div>
+    <form id="settings-form">
+      <div class="settings-section">
+        <h3>General</h3>
+        <div class="setting-item">
+          <label for="defaultAI">
+            <img src="./assets/icons/svg/ai-icon.svg" alt="Default AI">
+            Default AI Site:
+          </label>
+          <select id="defaultAI">
+            <option value="https://perplexity.ai">Perplexity AI Search</option>
+            <option value="https://labs.perplexity.ai">Perplexity AI Chat</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="settings-section">
+        <h3>Keyboard Shortcuts</h3>
+        <p class="instruction-text">Select the field you want to change, then press the key combination. It will automatically register.</p>
+        
+        <div class="shortcut-item">
+          <label>
+            <img src="./assets/icons/svg/perplexity-ai-icon.svg" alt="Perplexity AI">
+            Perplexity AI:
+          </label>
+          <input type="text" id="shortcut-perplexityAI" class="shortcut-input" readonly placeholder="Press keys..." required>
+          <div class="warning"></div>
+        </div>
+        <div class="shortcut-item">
+          <label>
+            <img src="./assets/icons/svg/perplexity-labs-icon.svg" alt="Perplexity Labs">
+            Perplexity Labs:
+          </label>
+          <input type="text" id="shortcut-perplexityLabs" class="shortcut-input" readonly placeholder="Press keys..." required>
+          <div class="warning"></div>
+        </div>
+        <div class="shortcut-item">
+          <label>
+            <img src="./assets/icons/svg/minimize-icon.svg" alt="Minimize App">
+            Minimize App:
+          </label>
+          <input type="text" id="shortcut-minimizeApp" class="shortcut-input" readonly placeholder="Press keys..." required>
+          <div class="warning"></div>
+        </div>
+        <div class="shortcut-item">
+          <label>
+            <img src="./assets/icons/svg/tray-icon.svg" alt="Send to Tray">
+            Send to Tray:
+          </label>
+          <input type="text" id="shortcut-sendToTray" class="shortcut-input" readonly placeholder="Press keys..." required>
+          <div class="warning"></div>
+        </div>
+        <div class="shortcut-item">
+          <label>
+            <img src="./assets/icons/svg/restore-icon.svg" alt="Restore App">
+            Restore App:
+          </label>
+          <input type="text" id="shortcut-restoreApp" class="shortcut-input" readonly placeholder="Press keys..." required>
+          <div class="warning"></div>
+        </div>
+        <div class="shortcut-item">
+          <label>
+            <img src="./assets/icons/svg/refresh-icon.svg" alt="Reload">
+            Reload:
+          </label>
+          <input type="text" id="shortcut-reload" class="shortcut-input" readonly placeholder="Press keys..." required>
+          <div class="warning"></div>
+        </div>
+      </div>
+
+      <div class="button-container">
+        <button type="submit" class="save-button">Save Settings</button>
+        <button type="button" id="restore-button" class="restore-button" title="Restore Defaults">
+          <img src="./assets/icons/svg/revert-icon.svg" alt="Restore Defaults Icon">
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <script src="./src/js/renderer/renderer.js"></script>
+</body>
+</html>

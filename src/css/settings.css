@@ -1,0 +1,215 @@
+    /* Settings styles */
+    body {
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      color: #d1d5db;
+      background-color: #121212;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    #settings-container {
+      width: 470px;
+      padding: 25px;
+      background: #2e2e2e;
+      border-radius: 12px;
+      color: #e5e7eb;
+      border: 1px solid #444;
+    }
+  
+    .settings-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+  
+    .settings-icon {
+      width: 30px;
+      height: 30px;
+    }
+  
+    .settings-header h2 {
+      font-size: 1.4em;
+      color: #ffffff;
+      margin: 0;
+      text-align: center;
+      flex-grow: 1;
+    }
+  
+    .close-button {
+      background: none;
+      border: none;
+      font-size: 1.2em;
+      color: #9ca3af;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+  
+    .close-button:hover {
+      color: #c0c4c8;
+    }
+
+    .settings-section {
+      margin-bottom: 30px;
+    }
+  
+    .settings-section h3 {
+      font-size: 1.1em;
+      color: #9ca3af;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #555;
+      padding-bottom: 5px;
+    }
+
+    .instruction-text {
+      font-size: 0.85em;
+      color: #9ca3af;
+      margin-bottom: 15px;
+      padding-left: 5px;
+    }
+  
+    .setting-item, .shortcut-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+  
+    .setting-item label, .shortcut-item label {
+      display: flex;
+      align-items: center;
+      font-size: 0.9em;
+      color: #ccc;
+      margin-right: 10px;
+      width: 140px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  
+    .setting-item label img, .shortcut-item label img {
+      width: 20px;
+      height: 20px;
+      margin-right: 8px;
+      opacity: 0.85;
+    }
+
+    select {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #3b3b3b;
+      border-radius: 8px;
+      background-color: #3a3a3a;
+      color: #e0e0e0;
+      font-size: 0.9em;
+      appearance: none;
+      background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns%3D%22http%3A//www.w3.org/2000/svg%22 viewBox%3D%220 0 4 5%22%3E%3Cpath fill%3D%22%23e0e0e0%22 d%3D%22M2 0L0 2h4zM2 5L0 3h4z%22/%3E%3C/svg%3E');
+      background-repeat: no-repeat;
+      background-position: right 12px center;
+      background-size: 12px;
+      transition: border-color 0.3s ease, background-color 0.3s ease;
+    }
+  
+    select:focus {
+      outline: none;
+      border-color: #696b6e;
+      background-color: #4a4a4a;
+    }
+
+    select option {
+      background-color: #2e2e2e;
+      color: #e0e0e0;
+    }
+  
+    select option:hover,
+    select option:focus {
+      background-color: #3a3a3a;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #3b3b3b;
+      border-radius: 8px;
+      background-color: #3a3a3a;
+      color: #e0e0e0;
+      font-size: 0.9em;
+      transition: border-color 0.3s ease, background-color 0.3s ease;
+    }
+  
+    input[type="text"]:focus {
+      outline: none;
+      border-color: #3a5885;
+      background-color: #2f4b61;
+    }
+  
+    .warning {
+      font-size: 0.75em;
+      color: #ff5050;
+      margin-top: 5px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+   }
+   
+  
+    .shortcut-input:invalid + .warning {
+      display: block;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      margin-top: 20px;
+      gap: 10px;
+    }
+  
+    .save-button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 0.95em;
+      font-weight: bold;
+      background-color: #696b6e;
+      color: #fff;
+      transition: background-color 0.3s ease;
+    }
+  
+    .save-button:hover {
+      background-color: #4b5563;
+    }
+  
+    .restore-button {
+      border: none;
+      background: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+    }
+  
+    .restore-button img {
+      width: 24px;
+      height: 24px;
+      opacity: 0.7;
+      transition: opacity 0.3s ease;
+    }
+  
+    .restore-button:hover img {
+      opacity: 1;
+    }
+
+    .tooltip {
+      position: absolute;
+      background-color: #f77070;
+      color: #ffffff;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 0.75em;
+      box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+      z-index: 10;
+      opacity: 0.5;
+      transition: opacity 0.2s;
+    }
+    

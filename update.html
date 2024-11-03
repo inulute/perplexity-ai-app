@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Update Available</title>
+  <link rel="stylesheet" href="./src/css/update.css">
+  
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/dompurify@2.4.0/dist/purify.min.js"></script>
+</head>
+<body>
+    <div id="update-container">
+      <button id="update-close-button">&#x2715;</button>
+      <div class="update-header">
+        <img src="./assets/icons/svg/perplexity.svg" alt="App Icon" class="app-icon" width="auto" height="auto"><br>
+
+      <h2>New Update Available (v<span id="latest-version"></span>)</h2>
+    </div>
+    <div class="release-notes">
+      <h3>What's New:</h3>
+      <div id="release-notes-content">
+      </div>
+    </div>
+    <button id="download-update-button">Download Update</button>
+  </div>
+
+  <script src="./src/js/renderer/update_renderer.js"></script>
+</body>
+</html>
