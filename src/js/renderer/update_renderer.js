@@ -1,1 +1,55 @@
-function _0x4689(){const _0xdec8fb=['innerHTML','Failed\x20to\x20fetch\x20release\x20notes\x20for\x20version\x20','PNHpe','sXiAX','perplexity-ai-app','hioAS','16564896BWjtRM','69772HRPpQG','{}.constructor(\x22return\x20this\x22)(\x20)','340lLZzRg','bind','27230QTqbrT','error','IjUid','FUsNR','UMBye','jMMQn','addEventListener','800570hyuwTL','__proto__','GutYt','getElementById','main','549252tIiLeF','table','6zrIHXg','VmSCN','downloadUpdate','viQIb','MSXgf','rtCvO','exception','BbgFi','omavG','XpAuv','GgIkm','parse','click','console','toString','prototype','4990bnofsv','/release_notes/v','latest-version','inulute','9ahPDOR','1923088StXtuf','VfkUv','constructor','.md','<p\x20class=\x22error\x22>Failed\x20to\x20load\x20release\x20notes.</p>','querySelector','then','4741QaUfDv','log','rVaOi','7jCputJ','sanitize','update-close-button','IZhqw','electronAPI','length','YERoX'];_0x4689=function(){return _0xdec8fb;};return _0x4689();}(function(_0x2f6ee1,_0x27e198){const _0x2f3456=_0x577b,_0x41419b=_0x2f6ee1();while(!![]){try{const _0x102d3f=parseInt(_0x2f3456(0x92))/0x1+-parseInt(_0x2f3456(0x87))/0x2*(parseInt(_0x2f3456(0x99))/0x3)+-parseInt(_0x2f3456(0x89))/0x4*(parseInt(_0x2f3456(0xa9))/0x5)+-parseInt(_0x2f3456(0x97))/0x6*(parseInt(_0x2f3456(0xb8))/0x7)+parseInt(_0x2f3456(0xae))/0x8*(parseInt(_0x2f3456(0xad))/0x9)+-parseInt(_0x2f3456(0x8b))/0xa*(-parseInt(_0x2f3456(0xb5))/0xb)+-parseInt(_0x2f3456(0x86))/0xc;if(_0x102d3f===_0x27e198)break;else _0x41419b['push'](_0x41419b['shift']());}catch(_0x3c89bb){_0x41419b['push'](_0x41419b['shift']());}}}(_0x4689,0x8f8f1));const _0x17279d=(function(){let _0xd69144=!![];return function(_0x37a60b,_0x1ecd70){const _0x136fd1=_0xd69144?function(){if(_0x1ecd70){const _0x50432c=_0x1ecd70['apply'](_0x37a60b,arguments);return _0x1ecd70=null,_0x50432c;}}:function(){};return _0xd69144=![],_0x136fd1;};}()),_0x3c58bd=_0x17279d(this,function(){const _0x23f3cf=_0x577b,_0x1be21f={'viQIb':_0x23f3cf(0xc1),'UMBye':function(_0x504235,_0x3f5600){return _0x504235(_0x3f5600);},'FUsNR':function(_0x284909,_0x1c05d1){return _0x284909+_0x1c05d1;},'GzqrA':function(_0x2c5ab5,_0xfed9be){return _0x2c5ab5+_0xfed9be;},'omavG':'return\x20(function()\x20','rtCvO':function(_0x37f701){return _0x37f701();},'HTxGY':_0x23f3cf(0xb6),'STSMZ':'warn','afLJz':'info','IZhqw':_0x23f3cf(0x8c),'YERoX':_0x23f3cf(0x9f),'jMMQn':_0x23f3cf(0x98),'SwFCS':'trace'};let _0x5d7de0;try{if(_0x1be21f[_0x23f3cf(0x9c)]===_0x23f3cf(0xb7)){const _0x4fa23d=_0xbd252d[_0x23f3cf(0xb0)][_0x23f3cf(0xa8)][_0x23f3cf(0x8a)](_0x20e972),_0x33e3e9=_0x49397d[_0x3bd3d1],_0x21ded5=_0x2c4643[_0x33e3e9]||_0x4fa23d;_0x4fa23d[_0x23f3cf(0x93)]=_0x584e67['bind'](_0x4eb945),_0x4fa23d['toString']=_0x21ded5['toString'][_0x23f3cf(0x8a)](_0x21ded5),_0x1da891[_0x33e3e9]=_0x4fa23d;}else{const _0xeabd6a=_0x1be21f[_0x23f3cf(0x8f)](Function,_0x1be21f[_0x23f3cf(0x8e)](_0x1be21f['GzqrA'](_0x1be21f[_0x23f3cf(0xa1)],_0x23f3cf(0x88)),');'));_0x5d7de0=_0x1be21f[_0x23f3cf(0x9e)](_0xeabd6a);}}catch(_0x3a4760){_0x5d7de0=window;}const _0x4678b9=_0x5d7de0[_0x23f3cf(0xa6)]=_0x5d7de0[_0x23f3cf(0xa6)]||{},_0x64c8c9=[_0x1be21f['HTxGY'],_0x1be21f['STSMZ'],_0x1be21f['afLJz'],_0x1be21f[_0x23f3cf(0xbb)],_0x1be21f[_0x23f3cf(0xbe)],_0x1be21f[_0x23f3cf(0x90)],_0x1be21f['SwFCS']];for(let _0x160e24=0x0;_0x160e24<_0x64c8c9[_0x23f3cf(0xbd)];_0x160e24++){const _0x53c6a9=_0x17279d[_0x23f3cf(0xb0)][_0x23f3cf(0xa8)]['bind'](_0x17279d),_0x30b538=_0x64c8c9[_0x160e24],_0x717356=_0x4678b9[_0x30b538]||_0x53c6a9;_0x53c6a9[_0x23f3cf(0x93)]=_0x17279d[_0x23f3cf(0x8a)](_0x17279d),_0x53c6a9[_0x23f3cf(0xa7)]=_0x717356[_0x23f3cf(0xa7)][_0x23f3cf(0x8a)](_0x717356),_0x4678b9[_0x30b538]=_0x53c6a9;}});_0x3c58bd(),document['addEventListener']('DOMContentLoaded',()=>{const _0x2e8e94=_0x577b,_0x32dc59={'MrLQE':function(_0x1a6de9,_0x7328a0){return _0x1a6de9(_0x7328a0);},'OhLuy':_0x2e8e94(0xab),'IjUid':_0x2e8e94(0xba),'nMYHD':_0x2e8e94(0xa5)},_0x5da97b=document[_0x2e8e94(0x95)](_0x32dc59['OhLuy']);window[_0x2e8e94(0xbc)]['onLatestVersion'](_0x161351=>{_0x5da97b['textContent']=_0x161351,_0x32dc59['MrLQE'](fetchReleaseNotes,_0x161351);}),document['getElementById'](_0x32dc59[_0x2e8e94(0x8d)])['addEventListener'](_0x2e8e94(0xa5),()=>{const _0x3f499f=_0x2e8e94;window[_0x3f499f(0xbc)]['closeUpdateWindow']();}),document['getElementById']('download-update-button')[_0x2e8e94(0x91)](_0x32dc59['nMYHD'],()=>{const _0x18b832=_0x2e8e94;window['electronAPI'][_0x18b832(0x9b)]();});});function _0x577b(_0x3257cb,_0x31aaf3){const _0x2fa65f=_0x4689();return _0x577b=function(_0x3c58bd,_0x17279d){_0x3c58bd=_0x3c58bd-0x86;let _0x1d1586=_0x2fa65f[_0x3c58bd];return _0x1d1586;},_0x577b(_0x3257cb,_0x31aaf3);}function fetchReleaseNotes(_0x3a84b9){const _0x654407=_0x577b,_0x44d729={'sXiAX':'.release-notes','hioAS':function(_0x333b08,_0x13f535){return _0x333b08===_0x13f535;},'GgIkm':_0x654407(0x94),'VfkUv':'release-notes-content','BbgFi':'Error\x20fetching\x20release\x20notes:','VmSCN':_0x654407(0xc3),'MSXgf':function(_0x482412,_0xaf0850){return _0x482412(_0xaf0850);}},_0x23cc85=_0x654407(0xac),_0x1ff00e=_0x44d729[_0x654407(0x9a)],_0x3e0ad1=_0x654407(0x96),_0x5c5cc6='https://raw.githubusercontent.com/'+_0x23cc85+'/'+_0x1ff00e+'/'+_0x3e0ad1+_0x654407(0xaa)+_0x3a84b9+_0x654407(0xb1);_0x44d729[_0x654407(0x9d)](fetch,_0x5c5cc6)[_0x654407(0xb4)](_0x5b2428=>{const _0x44376a=_0x654407,_0x21aa56={'XpAuv':'Error\x20fetching\x20release\x20notes:','YOlrS':_0x44d729['sXiAX']};if(!_0x5b2428['ok']){if(_0x44d729[_0x44376a(0xc4)](_0x44d729[_0x44376a(0xa3)],_0x44d729[_0x44376a(0xa3)]))throw new Error(_0x44376a(0xc0)+_0x3a84b9);else{_0xf39aed['error'](_0x21aa56[_0x44376a(0xa2)],_0x24ec39);const _0x4fca4d=_0x1cdff2[_0x44376a(0xb3)](_0x21aa56['YOlrS']);_0x4fca4d['innerHTML']+=_0x44376a(0xb2);}}return _0x5b2428['text']();})[_0x654407(0xb4)](_0xe28d5=>{const _0x6b37fe=_0x654407,_0x8bb23=document[_0x6b37fe(0x95)](_0x44d729[_0x6b37fe(0xaf)]),_0x16d282=marked[_0x6b37fe(0xa4)](_0xe28d5),_0x39f7db=DOMPurify[_0x6b37fe(0xb9)](_0x16d282);_0x8bb23['innerHTML']=_0x39f7db;})['catch'](_0xd250e9=>{const _0x51e485=_0x654407;console[_0x51e485(0x8c)](_0x44d729[_0x51e485(0xa0)],_0xd250e9);const _0x13d348=document['querySelector'](_0x44d729[_0x51e485(0xc2)]);_0x13d348[_0x51e485(0xbf)]+=_0x51e485(0xb2);});}
+// update_renderer.js
+
+document.addEventListener('DOMContentLoaded', () => {
+  const latestVersionSpan = document.getElementById('latest-version');
+
+  window.electronAPI.onLatestVersion((version) => {
+    latestVersionSpan.textContent = version;
+    fetchReleaseNotes(version);
+  });
+
+  // Close button
+  document.getElementById('update-close-button').addEventListener('click', () => {
+    window.electronAPI.closeUpdateWindow();
+  });
+
+  // Download button
+  document.getElementById('download-update-button').addEventListener('click', () => {
+    window.electronAPI.downloadUpdate();
+  });
+});
+
+/**
+* Fetches the release notes from GitHub for the specified version and displays them.
+* @param {string} version 
+*/
+function fetchReleaseNotes(version) {
+
+const owner = 'inulute'; 
+const repo = 'perplexity-ai-app'; 
+const branch = 'main'; 
+
+const rawUrl = `https://raw.githubusercontent.com/${owner}/${repo}/${branch}/release_notes/v${version}.md`;
+
+fetch(rawUrl)
+  .then(response => {
+    if (!response.ok) {
+      throw new Error(`Failed to fetch release notes for version ${version}`);
+    }
+    return response.text();
+  })
+  .then(markdown => {
+    const releaseNotesContent = document.getElementById('release-notes-content');
+    
+    const htmlContent = marked.parse(markdown);
+    
+    const sanitizedContent = DOMPurify.sanitize(htmlContent);
+
+    releaseNotesContent.innerHTML = sanitizedContent;
+  })
+  .catch(error => {
+    console.error('Error fetching release notes:', error);
+    const releaseNotesContainer = document.querySelector('.release-notes');
+    releaseNotesContainer.innerHTML += `<p class="error">Failed to load release notes.</p>`;
+  });
+}
