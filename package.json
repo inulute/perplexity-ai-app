@@ -1,48 +1,125 @@
 {
   "name": "perplexity-ai-app",
   "productName": "Perplexity AI",
-  "version": "3.2.0",
-  "description": "Perplexity AI desktop application by inulute.",
+  "version": "4.0.0",
+  "description": "Perplexity AI by inulute",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
+    "start-minimized": "electron . --hidden",
     "build": "electron-builder",
-    "package-mac": "electron-builder --mac",
     "package-win": "electron-builder --win",
+    "package-mac": "electron-builder --mac",
     "package-linux": "electron-builder --linux",
-    "obfuscate": "node obfuscate.js"
+    "postinstall": "electron-builder install-app-deps"
   },
   "repository": "https://github.com/inulute/perplexity-ai-app",
   "author": "inulute",
   "license": "GPL-3.0-only",
   "dependencies": {
-    "electron-store": "^7.0.3"
+    "electron-clipboard-extended": "^1.1.1",
+    "electron-store": "^7.0.3",
+    "electron-window-state": "^5.0.3",
+    "marked": "^15.0.11",
+    "node-global-key-listener": "^0.3.0"
   },
   "devDependencies": {
-    "csso": "^5.0.5",
     "electron": "^33.0.2",
-    "electron-builder": "^25.1.8",
-    "javascript-obfuscator": "^4.1.1"
+    "electron-builder": "^25.1.8"
   },
   "build": {
     "appId": "com.inulute.perplexityai",
     "productName": "Perplexity AI",
+    "afterPack": "./build/after-pack.js",
     "directories": {
       "output": "release-builds"
     },
+    "asar": true,
+    "compression": "maximum",
+    "files": [
+      "**/*",
+      "!**/node_modules/*/{CHANGELOG.md,README.md,README,readme.md,readme}",
+      "!**/node_modules/*/{test,__tests__,tests,powered-test,example,examples}",
+      "!**/node_modules/*.d.ts",
+      "!**/node_modules/.bin",
+      "!**/.{idea,git,cache,github,vscode}",
+      "!**/{.DS_Store,.git,.gitignore,.npmignore}",
+      "!**/{*.log,*.md}",
+      "!**/package-lock.json"
+    ],
+    "extraResources": [
+      {
+        "from": "resources/scripts",
+        "to": "scripts",
+        "filter": [
+          "**/*"
+        ]
+      }
+    ],
+    "protocols": [
+      {
+        "name": "Perplexity AI Search",
+        "schemes": [
+          "perplexity-search"
+        ]
+      }
+    ],
     "mac": {
-      "category": "your.app.Productivity",
-      "icon": "./assets/icons/mac/favicon.icns"
+      "category": "public.app-category.productivity",
+      "icon": "./assets/icons/mac/favicon.icns",
+      "darkModeSupport": true,
+      "hardenedRuntime": true,
+      "gatekeeperAssess": false,
+      "entitlements": "build/entitlements.mac.plist",
+      "entitlementsInherit": "build/entitlements.mac.plist",
+      "target": [
+        "dmg",
+        "zip"
+      ]
     },
     "win": {
-      "target": "nsis",
+      "target": [
+        "nsis"
+      ],
       "icon": "./assets/icons/win/icon.ico",
-      "sign": false
+      "requestedExecutionLevel": "asInvoker"
+    },
+    "nsis": {
+      "oneClick": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Perplexity AI",
+      "runAfterFinish": true,
+      "installerIcon": "./assets/icons/win/icon.ico",
+      "uninstallerIcon": "./assets/icons/win/icon.ico",
+      "installerHeaderIcon": "./assets/icons/win/icon.ico",
+      "artifactName": "${productName}-Setup-${version}.${ext}",
+      "differentialPackage": true
     },
     "linux": {
-      "target": "AppImage",
+      "target": [
+        "AppImage",
+        "deb"
+      ],
       "icon": "./assets/icons/png/favicon.png",
+      "category": "Utility",
+      "synopsis": "Perplexity AI - system-wide search and context menu integration",
+      "desktop": {
+        "StartupWMClass": "perplexity-ai-app"
+      },
+      "artifactName": "${productName}-${version}.${ext}"
+    },
+    "appImage": {
+      "license": "LICENSE",
       "category": "Utility"
+    },
+    "deb": {
+      "depends": [
+        "libnotify4",
+        "libxtst6",
+        "libnss3"
+      ],
+      "compression": "xz"
     }
   }
 }
