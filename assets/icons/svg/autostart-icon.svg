@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Modern rocket ship representing auto-launch -->
+  <path d="M12,1.5 C10,7 8.5,10 4,12 C8.5,14 10,17 12,22.5 C14,17 15.5,14 20,12 C15.5,10 14,7 12,1.5 Z" fill="#ffffff" stroke="#ffffff" stroke-width="0.5"/>
+  
+  <!-- Orbit circle -->
+  <circle cx="12" cy="12" r="9" stroke="#ffffff" fill="none" stroke-dasharray="1.5,1.5"/>
+  
+  <!-- Small stars/sparkles -->
+  <circle cx="6" cy="6" r="0.8" fill="#ffffff"/>
+  <circle cx="18" cy="6" r="0.8" fill="#ffffff"/>
+  <circle cx="18" cy="18" r="0.8" fill="#ffffff"/>
+  <circle cx="6" cy="18" r="0.8" fill="#ffffff"/>
+  
+  <!-- Motion lines -->
+  <path d="M12,7 L12,4" stroke="#ffffff" stroke-width="1"/>
+  <path d="M17,12 L20,12" stroke="#ffffff" stroke-width="1"/>
+  <path d="M12,17 L12,20" stroke="#ffffff" stroke-width="1"/>
+  <path d="M7,12 L4,12" stroke="#ffffff" stroke-width="1"/>
+</svg>
