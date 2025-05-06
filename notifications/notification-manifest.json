@@ -1,0 +1,11 @@
+{
+    "notifications": [
+      {
+        "id": "1",
+        "title": "Welcome to Perplexity AI v4.0.0",
+        "filename": "notification-1.md",
+        "date": "2025-05-06",
+        "priority": "medium"
+      }
+    ]
+  }

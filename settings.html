@@ -26,10 +26,21 @@
           </select>
         </div>
       </div>
-
+ 
+      <div class="setting-item">
+        <label for="autostart">
+          <img src="./assets/icons/svg/autostart-icon.svg" alt="Autostart">
+          Autostart:
+        </label>
+        <label class="toggle-switch">
+          <input type="checkbox" id="toggle-autostart" class="toggle-checkbox">
+          <span class="toggle-slider"></span>
+        </label>
+      </div>
+      
       <div class="settings-section">
-        <h3>Keyboard Shortcuts</h3>
-        <p class="instruction-text">Select the field you want to change, then press the key combination. It will automatically register.</p>
+        <h3>Shortcuts</h3>
+        <p class="section-description">Enable and customize the ones you want to use.</p>
         
         <div class="shortcut-item">
           <label>
@@ -37,59 +48,115 @@
             Perplexity AI:
           </label>
           <input type="text" id="shortcut-perplexityAI" class="shortcut-input" readonly placeholder="Press keys..." required>
-          <div class="warning"></div>
+          <label class="toggle-switch">
+            <input type="checkbox" id="toggle-perplexityAI" class="toggle-checkbox">
+            <span class="toggle-slider"></span>
+          </label>
         </div>
+        
         <div class="shortcut-item">
           <label>
             <img src="./assets/icons/svg/perplexity-labs-icon.svg" alt="Perplexity Labs">
             Perplexity Labs:
           </label>
           <input type="text" id="shortcut-perplexityLabs" class="shortcut-input" readonly placeholder="Press keys..." required>
-          <div class="warning"></div>
-        </div>
-        <div class="shortcut-item">
-          <label>
-            <img src="./assets/icons/svg/minimize-icon.svg" alt="Minimize App">
-            Minimize App:
+          <label class="toggle-switch">
+            <input type="checkbox" id="toggle-perplexityLabs" class="toggle-checkbox">
+            <span class="toggle-slider"></span>
           </label>
-          <input type="text" id="shortcut-minimizeApp" class="shortcut-input" readonly placeholder="Press keys..." required>
-          <div class="warning"></div>
         </div>
+        
         <div class="shortcut-item">
           <label>
             <img src="./assets/icons/svg/tray-icon.svg" alt="Send to Tray">
             Send to Tray:
           </label>
           <input type="text" id="shortcut-sendToTray" class="shortcut-input" readonly placeholder="Press keys..." required>
-          <div class="warning"></div>
+          <label class="toggle-switch">
+            <input type="checkbox" id="toggle-sendToTray" class="toggle-checkbox">
+            <span class="toggle-slider"></span>
+          </label>
         </div>
+        
         <div class="shortcut-item">
           <label>
             <img src="./assets/icons/svg/restore-icon.svg" alt="Restore App">
             Restore App:
           </label>
           <input type="text" id="shortcut-restoreApp" class="shortcut-input" readonly placeholder="Press keys..." required>
-          <div class="warning"></div>
+          <label class="toggle-switch">
+            <input type="checkbox" id="toggle-restoreApp" class="toggle-checkbox">
+            <span class="toggle-slider"></span>
+          </label>
         </div>
+        
         <div class="shortcut-item">
           <label>
-            <img src="./assets/icons/svg/refresh-icon.svg" alt="Reload">
-            Reload:
+            <img src="./assets/icons/svg/search-icon.svg" alt="Quick Search">
+            Quick Search:
           </label>
-          <input type="text" id="shortcut-reload" class="shortcut-input" readonly placeholder="Press keys..." required>
-          <div class="warning"></div>
+          <input type="text" id="shortcut-quickSearch" class="shortcut-input" readonly placeholder="Press keys..." required>
+          <label class="toggle-switch">
+            <input type="checkbox" id="toggle-quickSearch" class="toggle-checkbox">
+            <span class="toggle-slider"></span>
+          </label>
         </div>
+        
+        <div class="shortcut-item">
+          <label>
+            <img src="./assets/icons/svg/custom-prefix-icon.svg" alt="Custom Prefix">
+            Custom Prefix:
+          </label>
+          <input type="text" id="shortcut-customPrefixSearch" class="shortcut-input" readonly placeholder="Press keys..." required>
+          <label class="toggle-switch">
+            <input type="checkbox" id="toggle-customPrefixSearch" class="toggle-checkbox">
+            <span class="toggle-slider"></span>
+          </label>
+        </div>
+        
+        <button type="button" id="show-instructions-button" class="instructions-button">
+          View Shortcut Instructions
+        </button>
       </div>
 
       <div class="button-container">
-        <button type="submit" class="save-button">Save Settings</button>
         <button type="button" id="restore-button" class="restore-button" title="Restore Defaults">
           <img src="./assets/icons/svg/revert-icon.svg" alt="Restore Defaults Icon">
         </button>
+        <button type="submit" class="save-button">Save Settings</button>
       </div>
     </form>
   </div>
 
   <script src="./src/js/renderer/renderer.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const showInstructionsButton = document.getElementById('show-instructions-button');
+      
+      const documentationUrl = 'https://pplx.inulute.com/shortcuts';
+      
+      if (showInstructionsButton) {
+        showInstructionsButton.addEventListener('click', () => {
+          window.electronAPI.openExternalLink(documentationUrl);
+        });
+      }
+    
+      const shortcutFields = document.querySelectorAll('.shortcut-input');
+      const shortcutToggles = document.querySelectorAll('.toggle-checkbox');
+      
+      shortcutToggles.forEach(toggle => {
+        const shortcutField = toggle.closest('.shortcut-item').querySelector('.shortcut-input');
+        shortcutField.disabled = !toggle.checked;
+        
+        toggle.addEventListener('change', (event) => {
+          shortcutField.disabled = !event.target.checked;
+        });
+      });
+    });
+    
+    function closeSettings() {
+      window.electronAPI.closeSettings();
+    }
+  </script>
 </body>
 </html>

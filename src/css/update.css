@@ -1,3 +1,11 @@
+/* update.css - Dark Theme */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Segoe UI', Tahoma, sans-serif;
   color: #d1d5db;
@@ -7,6 +15,7 @@ body {
   align-items: center;
   height: 100vh;
   margin: 0;
+  user-select: none;
 }
 
 #update-container {
@@ -17,6 +26,7 @@ body {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
   color: #e5e7eb;
   text-align: center;
+  position: relative;
 }
 
 .app-icon {
@@ -50,7 +60,14 @@ body {
   cursor: pointer;
 }
 
-#download-update-button {
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+#remind-tomorrow-button, #download-update-button {
   background-color: transparent;
   color: #ffffff;
   padding: 10px 20px;
@@ -58,14 +75,25 @@ body {
   border-radius: 6px;
   font-size: 1em;
   font-weight: bold;
-  margin: 20px auto 15px auto;
   cursor: pointer;
   transition: background-color 0.3s ease, border-color 0.3s ease;
+  flex: 1;
+}
+
+#remind-tomorrow-button {
+  background-color: transparent;
+  border-color: #4b5563;
+  color: #9ca3af;
+}
+
+#remind-tomorrow-button:hover {
+  background-color: #3a3a3a;
+  border-color: #4b5563;
 }
 
 #download-update-button:hover {
-  background-color: #3c455e;
-  border-color: #3c455e;
+  background-color: #20808D;
+  border-color: #20808D;
   color: #ffffff;
 }
 
@@ -75,6 +103,7 @@ body {
   border-radius: 8px;
   margin-top: 20px;
   text-align: left;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .release-notes h3 {
@@ -87,6 +116,8 @@ body {
   font-size: 0.9em;
   line-height: 1.6;
   color: #d1d5db;
+  max-height: 200px;
+  overflow-y: auto;
 }
 
 .release-notes img {
@@ -107,11 +138,6 @@ body {
   color: #b0b3b8;
 }
 
-#release-notes-content {
-  max-height: 200px;
-  overflow-y: auto;
-}
-
 #release-notes-content::-webkit-scrollbar {
   width: 8px;
 }
@@ -121,6 +147,7 @@ body {
   border-radius: 8px;
 }
 
-.release-notes {
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+.error {
+  color: #ef4444;
+  font-style: italic;
 }
