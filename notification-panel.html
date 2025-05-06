@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Notifications</title>
+  <!-- Include Marked.js for Markdown parsing -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <style>
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, sans-serif;
+      color: #d1d5db;
+      background-color: #1a1b1e;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      overflow: hidden;
+      font-size: 14px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 20px;
+      border-bottom: 1px solid #333;
+      background-color: #1a1b1e;
+      position: relative;
+      z-index: 10;
+    }
+    
+    h2 {
+      margin: 0;
+      color: #fff;
+      font-size: 1.1rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+    }
+    
+    .actions {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+    
+    .action-button {
+      background: rgba(255, 255, 255, 0.06);
+      border: none;
+      color: #9ca3af;
+      font-size: 0.85rem;
+      font-weight: 500;
+      cursor: pointer;
+      padding: 6px 12px;
+      border-radius: 4px;
+      transition: all 0.15s ease;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    
+    .action-button:hover {
+      background: #333;
+      color: #fff;
+    }
+    
+    .close-button {
+      background: none;
+      border: none;
+      color: #9ca3af;
+      font-size: 1.2rem;
+      cursor: pointer;
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      transition: all 0.15s ease;
+    }
+    
+    .close-button:hover {
+      color: #fff;
+    }
+    
+    .notifications-container {
+      flex: 1;
+      overflow-y: auto;
+      padding: 0;
+      background: #1a1b1e;
+    }
+    
+    .empty-state {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 80%;
+      color: #9ca3af;
+      font-size: 0.9rem;
+      text-align: center;
+      padding: 20px;
+    }
+    
+    .empty-state-icon {
+      font-size: 3rem;
+      margin-bottom: 15px;
+      opacity: 0.5;
+    }
+    
+    .empty-state div:nth-child(2) {
+      font-weight: 600;
+      font-size: 1rem;
+      margin-bottom: 8px;
+    }
+    
+    .notification-item {
+      padding: 16px 20px;
+      border-bottom: 1px solid #333;
+      cursor: pointer;
+      position: relative;
+      transition: background-color 0.15s ease;
+    }
+    
+    .notification-item:hover {
+      background-color: #212225;
+    }
+    
+    .notification-item.unread {
+      background-color: rgba(48, 213, 200, 0.05);
+    }
+    
+    .notification-item.unread:hover {
+      background-color: rgba(48, 213, 200, 0.1);
+    }
+    
+    .notification-title {
+      color: #fff;
+      font-weight: 500;
+      margin-bottom: 6px;
+      font-size: 0.95rem;
+      padding-right: 80px;
+      letter-spacing: -0.01em;
+      line-height: 1.4;
+    }
+    
+    .notification-date {
+      font-size: 0.8rem;
+      color: #9ca3af;
+    }
+    
+    .unread-marker {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: #30D5C8;
+      margin-right: 5px;
+      box-shadow: 0 0 5px rgba(48, 213, 200, 0.5);
+    }
+    
+    .notification-actions {
+      position: absolute;
+      top: 50%;
+      right: 15px;
+      display: none;
+      gap: 5px;
+      transform: translateY(-50%);
+      animation: fadeIn 0.2s ease;
+    }
+    
+    .notification-item:hover .notification-actions {
+      display: flex;
+    }
+    
+    .item-action {
+      background: none;
+      border: none;
+      color: #9ca3af;
+      font-size: 0.85rem;
+      cursor: pointer;
+      padding: 5px 10px;
+      border-radius: 4px;
+      transition: all 0.15s ease;
+    }
+    
+    .item-action:hover {
+      background-color: #333;
+      color: #fff;
+    }
+    
+    /* Detail view styles */
+    .detail-view {
+      height: calc(100vh - 60px);
+      overflow-y: auto;
+      display: none;
+      padding: 0;
+    }
+    
+    .detail-view.active {
+      display: block;
+      animation: slideIn 0.3s ease;
+    }
+    
+    .list-view {
+      height: calc(100vh - 60px);
+      overflow-y: auto;
+      transition: transform 0.3s ease;
+    }
+    
+    .list-view.hidden {
+      display: none;
+    }
+    
+    .back-button {
+      margin: 16px 20px;
+      background: none;
+      border: none;
+      color: #9ca3af;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+      padding: 8px 12px;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      transition: all 0.15s ease;
+    }
+    
+    .back-button:hover {
+      background-color: #333;
+      color: #fff;
+      transform: translateX(-2px);
+    }
+    
+    .notification-detail {
+      padding: 0 20px 30px;
+    }
+    
+    .notification-detail h1 {
+      font-size: 1.4rem;
+      margin: 0 0 20px 0;
+      color: #fff;
+      line-height: 1.3;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+    }
+    
+    .notification-detail h2 {
+      font-size: 1.2rem;
+      margin: 24px 0 16px;
+      color: #fff;
+      font-weight: 600;
+    }
+    
+    .notification-detail h3 {
+      font-size: 1.1rem;
+      margin: 20px 0 12px;
+      color: #fff;
+      font-weight: 600;
+    }
+    
+    .notification-detail p {
+      margin-bottom: 16px;
+      line-height: 1.65;
+    }
+    
+    .notification-detail img {
+      max-width: 100%;
+      border-radius: 4px;
+      margin: 16px 0;
+    }
+    
+    .notification-detail a {
+      color: #30D5C8;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.15s ease;
+      border-bottom: 1px dotted rgba(48, 213, 200, 0.4);
+      padding-bottom: 1px;
+    }
+    
+    .notification-detail a:hover {
+      text-decoration: underline;
+    }
+    
+    .notification-detail ul, .notification-detail ol {
+      padding-left: 20px;
+      margin: 0 0 16px 0;
+    }
+    
+    .notification-detail li {
+      margin-bottom: 8px;
+    }
+    
+    .notification-detail code {
+      background-color: #2d2d2d;
+      padding: 3px 6px;
+      border-radius: 3px;
+      font-family: monospace;
+      font-size: 0.9em;
+      color: #d1d5db;
+    }
+    
+    .notification-detail pre {
+      background-color: #2d2d2d;
+      padding: 16px;
+      border-radius: 5px;
+      overflow-x: auto;
+      margin: 16px 0;
+      border: 1px solid #333;
+    }
+    
+    .notification-detail pre code {
+      background: transparent;
+      padding: 0;
+    }
+    
+    .notification-detail blockquote {
+      border-left: 3px solid #30D5C8;
+      margin: 16px 0;
+      padding: 12px 20px;
+      color: #9ca3af;
+      background-color: #212225;
+      border-radius: 0 4px 4px 0;
+    }
+    
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+    
+    ::-webkit-scrollbar-track {
+      background: #1a1b1e;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+      background: #4b5563;
+      border-radius: 8px;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+      background: #606b7d;
+    }
+    
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    
+    @keyframes slideIn {
+      from { transform: translateX(20px); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h2>Notifications</h2>
+    <div class="actions">
+      <button class="action-button" id="mark-all-read">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M9 16.17L4.83 12L3.41 13.41L9 19L21 7L19.59 5.59L9 16.17Z" fill="currentColor"/>
+        </svg>
+        Mark All as Read
+      </button>
+      <button class="close-button" id="close-button">✕</button>
+    </div>
+  </div>
+  
+  <div class="list-view" id="list-view">
+    <div class="notifications-container" id="notifications-list">
+      <!-- Notification items will be inserted here -->
+    </div>
+    
+    <div class="empty-state" id="empty-state" style="display:none;">
+      <div class="empty-state-icon">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 22C13.1 22 14 21.1 14 20H10C10 21.1 10.9 22 12 22ZM18 16V11C18 7.93 16.37 5.36 13.5 4.68V4C13.5 3.17 12.83 2.5 12 2.5C11.17 2.5 10.5 3.17 10.5 4V4.68C7.64 5.36 6 7.92 6 11V16L4 18V19H20V18L18 16ZM16 17H8V11C8 8.52 9.51 6.5 12 6.5C14.49 6.5 16 8.52 16 11V17Z" fill="#9ca3af"/>
+        </svg>
+      </div>
+      <div>No notifications yet</div>
+      <div>You'll see your notifications here when they arrive</div>
+    </div>
+  </div>
+  
+  <div class="detail-view" id="detail-view">
+    <button class="back-button" id="back-button">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M20 11H7.83L13.42 5.41L12 4L4 12L12 20L13.41 18.59L7.83 13H20V11Z" fill="currentColor"/>
+      </svg>
+      Back to Notifications
+    </button>
+    <div class="notification-detail" id="notification-detail">
+      <!-- Notification detail will be inserted here -->
+    </div>
+  </div>
+
+  <script src="./src/js/renderer/notification_panel_renderer.js"></script>
+</body>
+</html>

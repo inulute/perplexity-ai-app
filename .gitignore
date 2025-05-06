@@ -1,2 +1,4 @@
 node_modules
 release-builds
+build
+update-package-json.js

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Options</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background-color: #1e1e1e;
+      color: #d1d5db;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      height: 100vh;
+      width: 100vw;
+      user-select: none;
+    }
+    
+    #prefix-search-container {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+      padding: 16px;
+    }
+    
+    .prefix-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #333;
+    }
+    
+    .prefix-title {
+      font-size: 18px;
+      font-weight: 600;
+      color: #ffffff;
+    }
+    
+    .close-button {
+      background: none;
+      border: none;
+      color: #9ca3af;
+      font-size: 20px;
+      cursor: pointer;
+      height: 28px;
+      width: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 4px;
+      transition: color 0.3s ease;
+    }
+    
+    .close-button:hover {
+      color: #ffffff;
+    }
+    
+    .selected-text-container {
+      background-color: #2b2b2b;
+      padding: 12px;
+      border-radius: 8px;
+      margin-bottom: 16px;
+      max-height: 100px;
+      overflow-y: auto;
+      border: 1px solid #333;
+    }
+    
+    #selected-text {
+      font-size: 14px;
+      line-height: 1.4;
+      color: #e5e7eb;
+      word-wrap: break-word;
+      white-space: pre-wrap;
+    }
+    
+    .prefix-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 16px;
+      overflow-y: auto;
+      padding-right: 4px;
+    }
+    
+    .prefix-button {
+      background-color: #2b2b2b;
+      border: 2px solid #4b5563;
+      border-radius: 8px;
+      padding: 16px 12px;
+      color: #e5e7eb;
+      cursor: pointer;
+      font-size: 15px;
+      font-weight: 500;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: all 0.2s ease;
+      position: relative;
+    }
+    
+    .prefix-button:hover {
+      background-color: #2f484b;
+      border-color: #2f484b;
+    }
+    
+    .prefix-button:active {
+      transform: translateY(1px);
+    }
+    
+    .prefix-button .shortcut {
+      position: absolute;
+      bottom: 6px;
+      right: 6px;
+      font-size: 11px;
+      color: #9ca3af;
+      background-color: rgba(0, 0, 0, 0.3);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    
+    .prefix-icon {
+      margin-bottom: 10px;
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .prefix-icon svg {
+      width: 100%;
+      height: 100%;
+    }
+    
+    .prefix-instructions {
+      font-size: 12px;
+      color: #9ca3af;
+      text-align: center;
+      padding: 8px;
+      background-color: #33333b;
+      border-radius: 6px;
+      margin-top: auto;
+    }
+    
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    
+    ::-webkit-scrollbar-track {
+      background: #2b2b2b;
+      border-radius: 10px;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+      background: #4b5563;
+      border-radius: 10px;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+      background: #606770;
+    }
+  </style>
+</head>
+<body>
+  <div id="prefix-search-container">
+    <div class="prefix-header">
+      <div align="center" class="prefix-title"></div>
+      <h2 class="prefix-title">Select Search Type</h2>
+      <button id="close-button" class="close-button">×</button>
+    </div>
+    
+    <div class="selected-text-container">
+      <div id="selected-text"></div>
+    </div>
+    
+    <div class="prefix-grid">
+      <button class="prefix-button" data-prefix="">
+        <div class="prefix-icon">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M21 21L16.65 16.65M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z" stroke="#20808D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        Normal Search
+        <span class="shortcut">1</span>
+      </button>
+      
+      <button class="prefix-button" data-prefix="explain ">
+        <div class="prefix-icon">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9.66347 17H14.3364" stroke="#20808D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M12 3V4" stroke="#20808D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M12 20V21" stroke="#20808D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M20 12H21" stroke="#20808D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M3 12H4" stroke="#20808D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M18.3639 5.63604L17.6568 6.34315" stroke="#20808D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M6.34309 17.6569L5.63599 18.364" stroke="#20808D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M18.3639 18.364L17.6568 17.6569" stroke="#20808D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M6.34309 6.34315L5.63599 5.63604" stroke="#20808D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" fill="#20808D"/>
+          </svg>
+        </div>
+        Explain
+        <span class="shortcut">2</span>
+      </button>
+      
+      <button class="prefix-button" data-prefix="describe ">
+        <div class="prefix-icon">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 2H6C4.89543 2 4 2.89543 4 4V20C4 21.1046 4.89543 22 6 22H18C19.1046 22 20 21.1046 20 20V4C20 2.89543 19.1046 2 18 2H16" stroke="#20808D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M12 11H16" stroke="#20808D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M12 16H16" stroke="#20808D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M8 11H8.01" stroke="#20808D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M8 16H8.01" stroke="#20808D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M8 2V6C8 7.10457 8.89543 8 10 8H14C15.1046 8 16 7.10457 16 6V2" stroke="#20808D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        Describe
+        <span class="shortcut">3</span>
+      </button>
+      
+      <button class="prefix-button" data-prefix="meaning of ">
+        <div class="prefix-icon">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 19.5C4 18.837 4.26339 18.2011 4.73223 17.7322C5.20107 17.2634 5.83696 17 6.5 17H20" stroke="#20808D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M6.5 2H20V22H6.5C5.83696 22 5.20107 21.7366 4.73223 21.2678C4.26339 20.7989 4 20.163 4 19.5V4.5C4 3.83696 4.26339 3.20107 4.73223 2.73223C5.20107 2.26339 5.83696 2 6.5 2Z" stroke="#20808D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M10 9H14" stroke="#20808D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M10 13H16" stroke="#20808D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        Meaning
+        <span class="shortcut">4</span>
+      </button>
+      
+      <button class="prefix-button" data-prefix="translate ">
+        <div class="prefix-icon">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#20808D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M2 12H22" stroke="#20808D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M12 2C14.5013 4.73835 15.9228 8.29203 16 12C15.9228 15.708 14.5013 19.2616 12 22C9.49872 19.2616 8.07725 15.708 8 12C8.07725 8.29203 9.49872 4.73835 12 2Z" stroke="#20808D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        Translate
+        <span class="shortcut">5</span>
+      </button>
+      
+      <button class="prefix-button" data-prefix="summarize ">
+        <div class="prefix-icon">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9 5H7C5.89543 5 5 5.89543 5 7V19C5 20.1046 5.89543 21 7 21H17C18.1046 21 19 20.1046 19 19V7C19 5.89543 18.1046 5 17 5H15" stroke="#20808D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M9 5C9 3.89543 9.89543 3 11 3H13C14.1046 3 15 3.89543 15 5C15 6.10457 14.1046 7 13 7H11C9.89543 7 9 6.10457 9 5Z" stroke="#20808D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M9 12H15" stroke="#20808D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M9 16H15" stroke="#20808D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        Summarize
+        <span class="shortcut">6</span>
+      </button>
+    </div>
+    
+    <div class="prefix-instructions">
+      Press number key (1-6) to quickly select an option, or Esc to cancel
+    </div>
+  </div>
+  
+  <script src="./src/js/renderer/renderer.js"></script>
+</body>
+</html>

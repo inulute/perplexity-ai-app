@@ -1,109 +1,64 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Settings</title>
-  <link rel="stylesheet" href="./src/css/settings.css">
-
-  <style>
-
-  </style>
+  <title>Perplexity AI</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div id="settings-container">
-    <div class="settings-header">
-      <img src="./assets/icons/svg/settings-icon.svg" alt="Settings Icon" class="settings-icon">
-      <h2>Settings</h2>
-      <button class="close-button" onclick="closeSettings()">&#x2715;</button>
+  <div id="container">
+    <!-- Sidebar -->
+    <nav id="sidebar">
+
+<a href="#" class="menu-item" id="notification-button">
+  <div class="notification-icon-container">
+    <img src="./assets/icons/svg/notification-icon.svg" alt="Notifications" title="Notifications"/>
+    <div id="notification-badge" class="notification-badge" style="display:none;">0</div>
+  </div>
+</a>
+<div class="sidebar-separator" style="background-color: white; height: 1px; margin: 8px 0;"></div>
+      <a href="#" class="menu-item" onclick="window.electronAPI.switchAITool('https://perplexity.ai')">
+        <img src="./assets/icons/svg/perplexity-ai-icon.svg" alt="Perplexity AI" title="Perplexity AI"/>
+      </a>
+      <a href="#" class="menu-item" onclick="window.electronAPI.switchAITool('https://labs.perplexity.ai')">
+        <img src="./assets/icons/svg/perplexity-labs-icon.svg" alt="Perplexity Labs" title="Perplexity Labs"/>
+      </a>
+      <a href="#" class="menu-item" onclick="window.electronAPI.switchAITool('refresh')">
+        <img src="./assets/icons/svg/refresh-icon.svg" alt="Refresh" title="Refresh"/>
+      </a>
+      <!-- Spacer -->
+      <div class="spacer"></div>
+      <!-- Donate Button -->
+      <a href="#" class="menu-item" onclick="window.electronAPI.switchAITool('https://donate.inulute.com')">
+        <img src="./assets/icons/svg/coffee-icon.svg" alt="Donate" title="Buy me a Coffee"/>
+      </a>
+      <!-- Settings Button -->
+      <a href="#" class="menu-item" onclick="window.electronAPI.openSettings()">
+        <img src="./assets/icons/svg/settings-icon.svg" alt="Settings" title="Settings"/>
+      </a>
+      <!-- Version Display -->
+      <div class="version-display">v{version}</div>
+    </nav>
+    <!-- Content -->
+    <div id="content">
+      <div id="webview-container">
+        <!-- BrowserView content will be rendered here -->
+      </div>
+      <div id="loading">
+        <div class="spinner"></div>
+      </div>
     </div>
-    <form id="settings-form">
-      <div class="settings-section">
-        <h3>General</h3>
-        <div class="setting-item">
-          <label for="defaultAI">
-            <img src="./assets/icons/svg/ai-icon.svg" alt="Default AI">
-            Default AI Site:
-          </label>
-          <select id="defaultAI">
-            <option value="https://perplexity.ai">Perplexity AI Search</option>
-            <option value="https://labs.perplexity.ai">Perplexity AI Chat</option>
-          </select>
-        </div>
-      </div>
+  </div>
 
-      <div class="settings-section">
-
-        <div class="toggle-container">
-          <span class="toggle-description">Enable Shortcuts</span> 
-          <i class="fas fa-keyboard toggle-icon"></i>
-          <input type="checkbox" id="toggleShortcuts" class="toggle-input">
-          <label for="toggleShortcuts" class="toggle-label">
-            <span class="toggle-slider"></span>
-          </label>
-
-        </div>
-        
-        
-        
-        
-        
-        <div class="shortcut-item">
-          <label>
-            <img src="./assets/icons/svg/perplexity-ai-icon.svg" alt="Perplexity AI">
-            Perplexity AI:
-          </label>
-          <input type="text" id="shortcut-perplexityAI" class="shortcut-input" readonly placeholder="Press keys..." required>
-          <div class="warning"></div>
-        </div>
-        <div class="shortcut-item">
-          <label>
-            <img src="./assets/icons/svg/perplexity-labs-icon.svg" alt="Perplexity Labs">
-            Perplexity Labs:
-          </label>
-          <input type="text" id="shortcut-perplexityLabs" class="shortcut-input" readonly placeholder="Press keys..." required>
-          <div class="warning"></div>
-        </div>
-        <div class="shortcut-item">
-          <label>
-            <img src="./assets/icons/svg/minimize-icon.svg" alt="Minimize App">
-            Minimize App:
-          </label>
-          <input type="text" id="shortcut-minimizeApp" class="shortcut-input" readonly placeholder="Press keys..." required>
-          <div class="warning"></div>
-        </div>
-        <div class="shortcut-item">
-          <label>
-            <img src="./assets/icons/svg/tray-icon.svg" alt="Send to Tray">
-            Send to Tray:
-          </label>
-          <input type="text" id="shortcut-sendToTray" class="shortcut-input" readonly placeholder="Press keys..." required>
-          <div class="warning"></div>
-        </div>
-        <div class="shortcut-item">
-          <label>
-            <img src="./assets/icons/svg/restore-icon.svg" alt="Restore App">
-            Restore App:
-          </label>
-          <input type="text" id="shortcut-restoreApp" class="shortcut-input" readonly placeholder="Press keys..." required>
-          <div class="warning"></div>
-        </div>
-        <div class="shortcut-item">
-          <label>
-            <img src="./assets/icons/svg/refresh-icon.svg" alt="Reload">
-            Reload:
-          </label>
-          <input type="text" id="shortcut-reload" class="shortcut-input" readonly placeholder="Press keys..." required>
-          <div class="warning"></div>
-        </div>
-      </div>
-
-      <div class="button-container">
-        <button type="submit" class="save-button">Save Settings</button>
-        <button type="button" id="restore-button" class="restore-button" title="Restore Defaults">
-          <img src="./assets/icons/svg/revert-icon.svg" alt="Restore Defaults Icon">
-        </button>
-      </div>
-    </form>
+  <!-- Update Modal -->
+  <div id="update-modal" class="modal hidden">
+    <div class="modal-content">
+      <button class="close-button" id="update-close-button">&#x2715;</button>
+      <h2>Update Available</h2>
+      <p>A new version (v<span id="latest-version"></span>) is available.</p>
+      <button id="download-update-button">Download Update</button>
+    </div>
   </div>
 
   <script src="./src/js/renderer/renderer.js"></script>
