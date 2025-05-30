@@ -1177,9 +1177,9 @@ ipcMain.on('close-settings', () => {
   }
 });
 
+configureAppForBetterPerformance();
+
 app.whenReady().then(() => {
-  configureAppForBetterPerformance();
-  
   lastUpdateCheck = settings.get('lastUpdateCheck', 0);
   
   if (!app.requestSingleInstanceLock()) {
