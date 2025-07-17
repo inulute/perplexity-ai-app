@@ -6,6 +6,13 @@
         "filename": "notification-1.md",
         "date": "2025-05-06",
         "priority": "medium"
+      },
+      {
+        "id": "2",
+        "title": "Free 12 Months of Perplexity Pro",
+        "filename": "notification-2.md",
+        "date": "2025-07-17",
+        "priority": "high"
       }
     ]
   }
