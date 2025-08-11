@@ -20,8 +20,7 @@
     "electron-clipboard-extended": "^1.1.1",
     "electron-store": "^7.0.3",
     "electron-window-state": "^5.0.3",
-    "marked": "^15.0.11",
-    "node-global-key-listener": "^0.3.0"
+    "marked": "^15.0.11"
   },
   "devDependencies": {
     "electron": "^33.0.2",
@@ -30,7 +29,6 @@
   "build": {
     "appId": "com.inulute.perplexityai",
     "productName": "Perplexity AI",
-    "afterPack": "./build/after-pack.js",
     "directories": {
       "output": "release-builds"
     },
@@ -47,15 +45,6 @@
       "!**/{*.log,*.md}",
       "!**/package-lock.json"
     ],
-    "extraResources": [
-      {
-        "from": "resources/scripts",
-        "to": "scripts",
-        "filter": [
-          "**/*"
-        ]
-      }
-    ],
     "protocols": [
       {
         "name": "Perplexity AI Search",
@@ -66,12 +55,9 @@
     ],
     "mac": {
       "category": "public.app-category.productivity",
-      "icon": "./assets/icons/mac/favicon.icns",
       "darkModeSupport": true,
       "hardenedRuntime": true,
       "gatekeeperAssess": false,
-      "entitlements": "build/entitlements.mac.plist",
-      "entitlementsInherit": "build/entitlements.mac.plist",
       "target": [
         "dmg",
         "zip"
@@ -81,7 +67,6 @@
       "target": [
         "nsis"
       ],
-      "icon": "./assets/icons/win/icon.ico",
       "requestedExecutionLevel": "asInvoker"
     },
     "nsis": {
@@ -90,9 +75,6 @@
       "createStartMenuShortcut": true,
       "shortcutName": "Perplexity AI",
       "runAfterFinish": true,
-      "installerIcon": "./assets/icons/win/icon.ico",
-      "uninstallerIcon": "./assets/icons/win/icon.ico",
-      "installerHeaderIcon": "./assets/icons/win/icon.ico",
       "artifactName": "${productName}-Setup-${version}.${ext}",
       "differentialPackage": true
     },
@@ -101,7 +83,6 @@
         "AppImage",
         "deb"
       ],
-      "icon": "./assets/icons/png/favicon.png",
       "category": "Utility",
       "synopsis": "Perplexity AI - system-wide search and context menu integration",
       "desktop": {
