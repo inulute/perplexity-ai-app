@@ -163,6 +163,22 @@ await perplexity.evolve({
 
 ---
 
+## 🛠️ DEVELOPMENT & BUILDING
+
+### 📋 Prerequisites
+- **Node.js** (v16 or higher)
+- **Git** (for cloning the repository)
+
+### 🎯 Auto-Detection Build (Recommended)
+```
+git clone https://github.com/inulute/perplexity-ai-app
+cd perplexity-ai-app
+npm run package-auto
+```
+> Automatically detects your OS and builds the appropriate package format
+
+---
+
 <div align="center">
   <img src="./assets/icons/svg/inulute.svg" alt="Inulute" width="70px">
   
