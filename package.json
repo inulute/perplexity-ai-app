@@ -11,10 +11,11 @@
     "package-win": "electron-builder --win",
     "package-mac": "electron-builder --mac",
     "package-linux": "electron-builder --linux",
-    "postinstall": "electron-builder install-app-deps"
+    "postinstall": "electron-builder install-app-deps",
+    "package-auto": "node build-auto.js"
   },
   "repository": "https://github.com/inulute/perplexity-ai-app",
-  "author": "inulute",
+  "author": "inulute <inulute@users.noreply.github.com>",
   "license": "GPL-3.0-only",
   "dependencies": {
     "electron-clipboard-extended": "^1.1.1",
