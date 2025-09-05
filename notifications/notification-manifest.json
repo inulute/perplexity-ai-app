@@ -13,6 +13,13 @@
         "filename": "notification-2.md",
         "date": "2025-07-17",
         "priority": "medium"
+      },
+      {
+        "id": "4",
+        "title": "Free 12 Months of Perplexity Pro - PayPal Users Only!",
+        "filename": "notification-3.md",
+        "date": "2025-09-06",
+        "priority": "medium"
       }
     ]
   }
