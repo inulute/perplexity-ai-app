@@ -2,7 +2,7 @@
 
 PayPal users can now grab **1 year of Perplexity Pro** (worth $200) absolutely **FREE**!  
 
-![Perplexity Pro Offer – PayPal Users](https://cdn.jsdelivr.net/gh/inulute/perplexity-ai-app@refs/heads/main/notifications/images/ntf3.jpg)
+![Perplexity Pro Offer – PayPal Users](https://cdn.jsdelivr.net/gh/inulute/perplexity-ai-app@refs/heads/main/notifications/images/ntf3.png)
 
 ---
 
