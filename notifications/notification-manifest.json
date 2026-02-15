@@ -27,6 +27,13 @@
         "filename": "notification-4.md",
         "date": "2025-10-27",
         "priority": "medium"
+      },
+      {
+        "id": "6",
+        "title": "Join Our Telegram Channel",
+        "filename": "notification-5.md",
+        "date": "2026-02-15",
+        "priority": "medium"
       }
     ]
   }
