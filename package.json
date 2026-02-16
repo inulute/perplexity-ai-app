@@ -1,7 +1,7 @@
 {
   "name": "simplexity-ai-app",
   "productName": "SimplexityAI",
-  "version": "4.0.1",
+  "version": "0.0.0",
   "description": "SimplexityAI - Unofficial Perplexity AI Desktop App not affiliated with Perplexity AI",
   "main": "main.js",
   "scripts": {
