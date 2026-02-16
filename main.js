@@ -6,19 +6,19 @@ const marked = require('marked');
 const windowStateKeeper = require('electron-window-state');
 
 // Migrate settings from older app versions if this is a fresh install
-// Migration chain: perplexity-ai-app → simplexity-app → simplexityai-app
+// Migration chain: perplexity-ai-app → simplexity-ai-app
 (function migrateOldSettings() {
   try {
     const appDataBase = app.getPath('appData');
-    const newAppDataDir = app.getPath('userData'); // .../simplexityai-app
+    const newAppDataDir = app.getPath('userData'); // .../simplexity-ai-app
     const newConfigPath = path.join(newAppDataDir, 'config.json');
 
     // Already has config — no migration needed
     if (fs.existsSync(newConfigPath)) return;
 
-    // Try migrating from simplexity-app first (most recent), then perplexity-ai-app (oldest)
+    // Try migrating from simplexity-ai-app first (most recent), then perplexity-ai-app (oldest)
     const oldDirs = [
-      path.join(appDataBase, 'simplexity-app'),
+      path.join(appDataBase, 'simplexity-ai-app'),
       path.join(appDataBase, 'perplexity-ai-app')
     ];
 
@@ -990,7 +990,7 @@ ipcMain.on('remind-tomorrow-update', () => {
 });
 
 ipcMain.on('download-update', () => {
-  const downloadUrl = 'https://github.com/inulute/simplexityai-app/releases/latest';
+  const downloadUrl = 'https://github.com/inulute/simplexity-ai-app/releases/latest';
   
   shell.openExternal(downloadUrl);
   
@@ -1020,7 +1020,7 @@ function performUpdateCheck(currentVersion, retryCount) {
   const maxRetries = 3;
   
   const timestamp = Date.now();
-  const url = `https://raw.githubusercontent.com/inulute/simplexityai-app/main/package.json?_=${timestamp}`;
+  const url = `https://raw.githubusercontent.com/inulute/simplexity-ai-app/main/package.json?_=${timestamp}`;
   
   const request = net.request({
     url: url,

@@ -20,7 +20,7 @@ class NotificationManager {
     this.dismissedNotifications = this.store.get('dismissedNotifications', []);
     
     this.repoOwner = 'inulute'; 
-    this.repoName = 'simplexityai-app';
+    this.repoName = 'simplexity-ai-app';
     this.repoBranch = 'main';
     
     // Cache control

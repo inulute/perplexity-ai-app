@@ -171,8 +171,8 @@ await simplexityai.evolve({
 
 ### 🎯 Auto-Detection Build (Recommended)
 ```
-git clone https://github.com/inulute/simplexityai-app
-cd simplexityai-app
+git clone https://github.com/inulute/simplexity-ai-app
+cd simplexity-ai-app
 npm run package-auto
 ```
 > Automatically detects your OS and builds the appropriate package format
