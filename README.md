@@ -6,7 +6,7 @@
 
 <img src="./assets/icons/svg/simplexityaibg.svg" alt="SimplexityAI Logo" width="500px">
 
-[![Download Latest](https://img.shields.io/badge/Download-Latest-5BEBFF?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48cGF0aCBkPSJNMjEgMTV2NGEyIDIgMCAwIDEtMiAySDVhMiAyIDAgMCAxLTItMnYtNCIvPjxwb2x5bGluZSBwb2ludHM9IjcgMTAgMTIgMTUgMTcgMTAiLz48bGluZSB4MT0iMTIiIHkxPSIxNSIgeDI9IjEyIiB5Mj0iMyIvPjwvc3ZnPg==)](https://pplx.inulute.com/download/)
+[![Download Latest](https://img.shields.io/badge/Download-Latest-5BEBFF?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48cGF0aCBkPSJNMjEgMTV2NGEyIDIgMCAwIDEtMiAySDVhMiAyIDAgMCAxLTItMnYtNCIvPjxwb2x5bGluZSBwb2ludHM9IjcgMTAgMTIgMTUgMTcgMTAiLz48bGluZSB4MT0iMTIiIHkxPSIxNSIgeDI9IjEyIiB5Mj0iMyIvPjwvc3ZnPg==)](https://www.pling.com/p/2107698/)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg?style=for-the-badge)](https://www.gnu.org/licenses/gpl-3.0)
 [![GitHub Stars](https://img.shields.io/github/stars/inulute/simplexity-ai-app?style=for-the-badge&color=5BEBFF)](https://github.com/inulute/simplexity-ai-app/stargazers)
 
@@ -121,7 +121,7 @@ your data stays with Perplexity AI
 <table>
   <tr>
     <td align="center" width="33%">
-      <a href="https://pplx.inulute.com/download/">
+      <a href="https://www.pling.com/p/2107698/" target="_blank">
         <img src="https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white" alt="Windows" width="200px">
       </a>
       <br><br>
@@ -130,7 +130,7 @@ your data stays with Perplexity AI
       <sub>Windows 10/11 (64-bit)</sub>
     </td>
     <td align="center" width="33%">
-      <a href="https://pplx.inulute.com/download/">
+      <a href="https://www.pling.com/p/2107698/" target="_blank">
         <img src="https://img.shields.io/badge/macOS-000000?style=for-the-badge&logo=apple&logoColor=white" alt="macOS" width="200px">
       </a>
       <br><br>
@@ -139,7 +139,7 @@ your data stays with Perplexity AI
       <sub>macOS 10.13+ (Intel & Apple Silicon)</sub>
     </td>
     <td align="center" width="33%">
-      <a href="https://pplx.inulute.com/download/">
+      <a href="https://www.pling.com/p/2107698/" target="_blank">
         <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux" width="200px">
       </a>
       <br><br>
@@ -150,7 +150,7 @@ your data stays with Perplexity AI
   </tr>
 </table>
 
-### [📦 Download Latest Release](https://pplx.inulute.com/download/)
+### [📦 Download Latest Release](https://www.pling.com/p/2107698/)
 
 </div>
 
@@ -158,13 +158,29 @@ your data stays with Perplexity AI
 
 ## 🚀 Quick Start
 
-### Option 1: Direct Download from GitHub Releases (Recommended)
-1. Go to the **[GitHub Releases](https://github.com/inulute/simplexity-ai-app/releases)** page
-2. Download the installer for your platform (Windows `.exe`, macOS `.dmg`, or Linux `.AppImage`/`.deb`)
-3. Install and launch SimplexityAI
+### Option 1: Download from Pling (Recommended)
+**Why recommended:** Downloads via Pling support the project indirectly, so choosing this option helps keep SimplexityAI maintained and updated.
+
+1. Go to the **[Simplexity AI page on Pling](https://www.pling.com/p/2107698/)**.
+2. Download the installer for your platform (Windows `.exe`, macOS `.dmg`, or Linux `.AppImage`/`.deb`).
+3. Install and launch SimplexityAI.
 4. Start searching! 🎉
 
-### Option 2: Build from Source
+If you'd like to support the project indirectly, please consider downloading Simplexity AI via Pling:
+
+<p align="center">
+  <a href="https://www.pling.com/p/2107698/" target="_blank">
+    <img src="https://img.shields.io/badge/⬇️%20Download%20on%20Pling-blue?style=for-the-badge" alt="Download on Pling">
+  </a>
+</p>
+
+### Option 2: Direct Download from GitHub Releases
+1. Go to the **[GitHub Releases](https://github.com/inulute/simplexity-ai-app/releases)** page.
+2. Download the installer for your platform (Windows `.exe`, macOS `.dmg`, or Linux `.AppImage`/`.deb`).
+3. Install and launch SimplexityAI.
+4. Start searching! 🎉
+
+### Option 3: Build from Source
 
 **Prerequisites:**
 - Node.js 16+ ([Download](https://nodejs.org/))
@@ -354,15 +370,19 @@ If this app saves you time and boosts your productivity, consider supporting its
   <img src="https://img.shields.io/badge/☕_Buy_Me_a_Coffee-Support_Development-5BEBFF?style=for-the-badge" alt="Support" width="300">
 </a>
 
-<br><br>
+<br><br></div>
 
 **Your support helps:**
+
+
+
+
 - 🚀 Fund new features and improvements
 - 🐛 Maintain and fix bugs quickly
 - 📚 Create better documentation
 - 🌍 Keep the project alive and growing
 
-</div>
+
 
 ---
 
@@ -494,7 +514,7 @@ See [LICENSE](LICENSE) for full details.
 
 ---
 
-**SimplexityAI** • [Website](https://simplexity.inulute.com) • [Download](https://simplexity.inulute.com/download/) • [GitHub](https://github.com/inulute/simplexity-ai-app) • [Support](https://support.inulute.com)
+**SimplexityAI** • [Website](https://simplexity.inulute.com) • [Download on Pling](https://www.pling.com/p/2107698/) • [GitHub](https://github.com/inulute/simplexity-ai-app) • [Support](https://support.inulute.com)
 
 <sub>Not affiliated with Perplexity AI, Inc. • Independent open-source project</sub>
 
