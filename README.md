@@ -158,9 +158,9 @@ your data stays with Perplexity AI
 
 ## 🚀 Quick Start
 
-### Option 1: Download Pre-Built Release (Recommended)
-1. Visit [simplexity.inulute.com/download](https://simplexity.inulute.com/download/)
-2. Download for your platform
+### Option 1: Direct Download from GitHub Releases (Recommended)
+1. Go to the **[GitHub Releases](https://github.com/inulute/simplexity-ai-app/releases)** page
+2. Download the installer for your platform (Windows `.exe`, macOS `.dmg`, or Linux `.AppImage`/`.deb`)
 3. Install and launch SimplexityAI
 4. Start searching! 🎉
 
@@ -483,7 +483,7 @@ See [LICENSE](LICENSE) for full details.
 
 <br>
 
-<img src="./assets/icons/svg/inulute.svg" alt="Inulute" width="60px">
+<img src="./assets/icons/svg/inulute.svg" alt="Inulute" width="120px">
 
 <br><br>
 

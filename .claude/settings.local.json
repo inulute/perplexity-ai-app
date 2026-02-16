@@ -14,7 +14,8 @@
       "WebFetch(domain:snapcraft.io)",
       "WebFetch(domain:documentation.ubuntu.com)",
       "WebFetch(domain:github.com)",
-      "WebFetch(domain:www.electron.build)"
+      "WebFetch(domain:www.electron.build)",
+      "Bash(git check-ignore:*)"
     ]
   }
 }

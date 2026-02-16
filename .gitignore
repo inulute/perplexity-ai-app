@@ -1,4 +1,4 @@
 node_modules
 release-builds
-build
 update-package-json.js
+build/gpg-key-id.txt
