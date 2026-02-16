@@ -639,11 +639,15 @@ function adjustViewBounds() {
       width: viewWidth,
       height: viewHeight,
     });
-    
+
     if (process.platform === 'win32' && mainWindow.isVisible() && !mainWindow.isMinimized()) {
       mainWindow.webContents.invalidate();
     }
   }
+}
+
+function isCtrlEnterToSendEnabled() {
+  return settings.get('ctrlEnterToSend', false);
 }
 
 function switchView(url) {
@@ -794,10 +798,52 @@ function switchView(url) {
     });
 
     // Intercept keyboard shortcuts at the BrowserView level before the website can handle them
+    let sendingEnter = false;
     viewRef.webContents.on('before-input-event', (event, input) => {
       if (input.type !== 'keyDown') return;
 
       const key = input.key.toLowerCase();
+
+      // Ctrl+Enter to Send: block plain Enter in textarea, allow Ctrl+Enter
+      if (key === 'enter' && isCtrlEnterToSendEnabled() && !sendingEnter) {
+        const mod = process.platform === 'darwin' ? input.meta : input.control;
+
+        // Shift+Enter → allow default (newline)
+        if (input.shift) {
+          // let it through
+        }
+        // Ctrl/Cmd+Enter → submit by sending a clean Enter keypress
+        else if (mod) {
+          event.preventDefault();
+          // Send a raw Enter key without modifiers so Perplexity sees a normal Enter (submit)
+          sendingEnter = true;
+          viewRef.webContents.sendInputEvent({ type: 'keyDown', keyCode: 'Return' });
+          viewRef.webContents.sendInputEvent({ type: 'char', keyCode: '\r' });
+          viewRef.webContents.sendInputEvent({ type: 'keyUp', keyCode: 'Return' });
+          sendingEnter = false;
+        }
+        // Plain Enter → block and insert newline
+        else {
+          event.preventDefault();
+          viewRef.webContents.executeJavaScript(`
+            (function() {
+              const ta = document.activeElement;
+              if (ta && ta.tagName === 'TEXTAREA') {
+                const start = ta.selectionStart;
+                const end = ta.selectionEnd;
+                // Use native input setter to update React state
+                const nativeInputValueSetter = Object.getOwnPropertyDescriptor(
+                  window.HTMLTextAreaElement.prototype, 'value'
+                ).set;
+                nativeInputValueSetter.call(ta, ta.value.substring(0, start) + '\\n' + ta.value.substring(end));
+                ta.selectionStart = ta.selectionEnd = start + 1;
+                ta.dispatchEvent(new Event('input', { bubbles: true }));
+              }
+            })();
+          `).catch(() => {});
+        }
+        return;
+      }
 
       // Escape → close find bar if open
       if (key === 'escape' && findBarOpen) {
@@ -855,13 +901,14 @@ function switchView(url) {
           nagScreenSelectors.forEach((selector) => {
             document.querySelectorAll(selector).forEach((el) => el.remove());
           });
-          
+
           // Add CSS to optimize rendering performance
           const style = document.createElement('style');
           style.textContent = 'img { will-change: auto !important; } .will-change-transform { will-change: auto !important; }';
           document.head.appendChild(style);
         })();
       `);
+
     });
 
     currentView.webContents.on('did-start-loading', () => {
@@ -1238,6 +1285,10 @@ ipcMain.on('set-settings', (event, data) => {
     settings.set('closeToTray', data.closeToTray);
   }
 
+  if (data.ctrlEnterToSend !== undefined) {
+    settings.set('ctrlEnterToSend', data.ctrlEnterToSend);
+  }
+
   reattachShortcuts();
 });
 
@@ -1247,7 +1298,8 @@ ipcMain.on('get-settings', (event) => {
     defaultAI: settings.get('defaultAI', 'https://perplexity.ai'),
     disableHardwareAcceleration: settings.get('disableHardwareAcceleration', false),
     autoStartEnabled: autoStartEnabled,
-    closeToTray: settings.get('closeToTray', true)
+    closeToTray: settings.get('closeToTray', true),
+    ctrlEnterToSend: settings.get('ctrlEnterToSend', false)
   };
   event.sender.send('settings', data);
 });

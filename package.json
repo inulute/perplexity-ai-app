@@ -1,7 +1,7 @@
 {
   "name": "simplexity-ai-app",
   "productName": "SimplexityAI",
-  "version": "0.0.0",
+  "version": "5.0.0",
   "description": "SimplexityAI - Unofficial Perplexity AI Desktop App not affiliated with Perplexity AI",
   "main": "main.js",
   "scripts": {
@@ -56,6 +56,7 @@
     ],
     "mac": {
       "category": "public.app-category.productivity",
+      "icon": "assets/icons/mac/favicon.icns",
       "darkModeSupport": true,
       "hardenedRuntime": true,
       "gatekeeperAssess": false,
@@ -68,6 +69,7 @@
       "target": [
         "nsis"
       ],
+      "icon": "assets/icons/win/icon.ico",
       "requestedExecutionLevel": "asInvoker"
     },
     "nsis": {
@@ -78,13 +80,16 @@
       "runAfterFinish": true,
       "artifactName": "${productName}-Setup-${version}.${ext}",
       "differentialPackage": true,
-      "include": "build/installer.nsh"
+      "include": "build/installer.nsh",
+      "installerIcon": "assets/icons/win/icon.ico",
+      "uninstallerIcon": "assets/icons/win/icon.ico"
     },
     "linux": {
       "target": [
         "AppImage",
         "deb"
       ],
+      "icon": "assets/icons/png/favicon.png",
       "category": "Utility",
       "synopsis": "Simplexity AI - Unofficial Perplexity AI Desktop App",
       "desktop": {

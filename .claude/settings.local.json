@@ -4,7 +4,17 @@
       "Bash(ren:*)",
       "Bash(ren perplexity-ai-icon.svg simplexity-ai-icon.svg)",
       "Bash(ren perplexity-labs-icon.svg simplexity-labs-icon.svg)",
-      "Bash(dir /b \"E:\\\\GitHub\\\\perplexity-ai-app\")"
+      "Bash(dir /b \"E:\\\\GitHub\\\\perplexity-ai-app\")",
+      "Bash(npm run lint)",
+      "Bash(node -c:*)",
+      "Bash(xxd:*)",
+      "WebFetch(domain:docs.flatpak.org)",
+      "WebFetch(domain:docs.flathub.org)",
+      "WebFetch(domain:wiki.archlinux.org)",
+      "WebFetch(domain:snapcraft.io)",
+      "WebFetch(domain:documentation.ubuntu.com)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:www.electron.build)"
     ]
   }
 }

@@ -1,0 +1,137 @@
+name: Build & Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+    inputs:
+      draft:
+        description: 'Create as draft release'
+        required: false
+        default: 'true'
+        type: boolean
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: windows-latest
+            platform: win
+          - os: macos-latest
+            platform: mac
+          - os: ubuntu-latest
+            platform: linux
+
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build for Windows
+        if: matrix.platform == 'win'
+        run: npm run package-win
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build for macOS
+        if: matrix.platform == 'mac'
+        run: npm run package-mac
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build for Linux
+        if: matrix.platform == 'linux'
+        run: npm run package-linux
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Upload Windows artifacts
+        if: matrix.platform == 'win'
+        uses: actions/upload-artifact@v4
+        with:
+          name: windows-builds
+          path: |
+            release-builds/*.exe
+          retention-days: 5
+
+      - name: Upload macOS artifacts
+        if: matrix.platform == 'mac'
+        uses: actions/upload-artifact@v4
+        with:
+          name: macos-builds
+          path: |
+            release-builds/*.dmg
+            release-builds/*.zip
+          retention-days: 5
+
+      - name: Upload Linux artifacts
+        if: matrix.platform == 'linux'
+        uses: actions/upload-artifact@v4
+        with:
+          name: linux-builds
+          path: |
+            release-builds/*.AppImage
+            release-builds/*.deb
+          retention-days: 5
+
+  release:
+    needs: build
+    runs-on: ubuntu-latest
+    if: startsWith(github.ref, 'refs/tags/v')
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Download all artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: dist
+
+      - name: List artifacts
+        run: find dist -type f | sort
+
+      - name: Get version from tag
+        id: version
+        run: echo "VERSION=${GITHUB_REF#refs/tags/v}" >> $GITHUB_OUTPUT
+
+      - name: Read release notes
+        id: notes
+        run: |
+          NOTES_FILE="release_notes/v${{ steps.version.outputs.VERSION }}.md"
+          if [ -f "$NOTES_FILE" ]; then
+            echo "NOTES_FILE=$NOTES_FILE" >> $GITHUB_OUTPUT
+            echo "HAS_NOTES=true" >> $GITHUB_OUTPUT
+          else
+            echo "HAS_NOTES=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Create Release Draft
+        uses: softprops/action-gh-release@v2
+        with:
+          draft: true
+          name: "Simplexity AI v${{ steps.version.outputs.VERSION }}"
+          body_path: ${{ steps.notes.outputs.HAS_NOTES == 'true' && steps.notes.outputs.NOTES_FILE || '' }}
+          generate_release_notes: ${{ steps.notes.outputs.HAS_NOTES != 'true' }}
+          files: |
+            dist/windows-builds/*
+            dist/macos-builds/*
+            dist/linux-builds/*
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -157,6 +157,11 @@ document.addEventListener('DOMContentLoaded', () => {
       if (closeToTrayToggle) {
         closeToTrayToggle.checked = data.closeToTray !== false;
       }
+
+      const ctrlEnterToSendToggle = document.getElementById('toggle-ctrlEnterToSend');
+      if (ctrlEnterToSendToggle) {
+        ctrlEnterToSendToggle.checked = data.ctrlEnterToSend || false;
+      }
     });
 
     for (const [key, input] of Object.entries(shortcutFields)) {
@@ -303,6 +308,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const autostartToggle = document.getElementById('toggle-autostart');
         
         const closeToTrayToggle = document.getElementById('toggle-closeToTray');
+        const ctrlEnterToSendToggle = document.getElementById('toggle-ctrlEnterToSend');
 
         const settingsToSave = {
           shortcuts: newShortcuts,
@@ -311,7 +317,8 @@ document.addEventListener('DOMContentLoaded', () => {
             ? document.getElementById('toggle-hardware-acceleration').checked
             : false,
           autoStartEnabled: autostartToggle ? autostartToggle.checked : false,
-          closeToTray: closeToTrayToggle ? closeToTrayToggle.checked : true
+          closeToTray: closeToTrayToggle ? closeToTrayToggle.checked : true,
+          ctrlEnterToSend: ctrlEnterToSendToggle ? ctrlEnterToSendToggle.checked : false
         };
         window.electronAPI.setSettings(settingsToSave);
         savedShortcuts = { ...newShortcuts };
@@ -477,11 +484,11 @@ document.addEventListener('DOMContentLoaded', () => {
       if (event.key === 'Escape') {
         window.electronAPI.closePrefixSearch();
       }
-      
+
       if (['1', '2', '3', '4', '5', '6'].includes(event.key)) {
         const index = parseInt(event.key) - 1;
         const buttons = document.querySelectorAll('.prefix-button');
-        
+
         if (index >= 0 && index < buttons.length) {
           buttons[index].click();
         }
