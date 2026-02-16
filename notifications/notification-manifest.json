@@ -1,33 +1,6 @@
 {
     "notifications": [
-      {
-        "id": "1",
-        "title": "Welcome to Perplexity AI v4.0.0",
-        "filename": "notification-1.md",
-        "date": "2025-05-06",
-        "priority": "medium"
-      },
-      {
-        "id": "3",
-        "title": "Free 12 Months of Perplexity Pro",
-        "filename": "notification-2.md",
-        "date": "2025-07-17",
-        "priority": "medium"
-      },
-      {
-        "id": "4",
-        "title": "Free 12 Months of Perplexity Pro - PayPal Users Only!",
-        "filename": "notification-3.md",
-        "date": "2025-09-06",
-        "priority": "medium"
-      },
-      {
-        "id": "5",
-        "title": "☄️ Perplexity's Comet - 1 Month of Pro, Free",
-        "filename": "notification-4.md",
-        "date": "2025-10-27",
-        "priority": "medium"
-      },
+      
       {
         "id": "6",
         "title": "Join Our Telegram Channel",

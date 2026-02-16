@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Perplexity AI</title>
+  <title>SimplexityAI</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -19,10 +19,10 @@
 </a>
 <div class="sidebar-separator" style="background-color: white; height: 1px; margin: 8px 0;"></div>
       <a href="#" class="menu-item" onclick="window.electronAPI.switchAITool('https://perplexity.ai')">
-        <img src="./assets/icons/svg/perplexity-ai-icon.svg" alt="Perplexity AI" title="Perplexity AI"/>
+        <img src="./assets/icons/svg/perplexity-ai-icon.svg" alt="AI Search" title="AI Search"/>
       </a>
       <a href="#" class="menu-item" onclick="window.electronAPI.switchAITool('https://labs.perplexity.ai')">
-        <img src="./assets/icons/svg/perplexity-labs-icon.svg" alt="Perplexity Labs" title="Perplexity Labs"/>
+        <img src="./assets/icons/svg/perplexity-labs-icon.svg" alt="AI Labs" title="AI Labs"/>
       </a>
       <a href="#" class="menu-item" onclick="window.electronAPI.switchAITool('refresh')">
         <img src="./assets/icons/svg/refresh-icon.svg" alt="Refresh" title="Refresh"/>
@@ -47,6 +47,14 @@
       </div>
       <div id="loading">
         <div class="spinner"></div>
+      </div>
+      <!-- Find Bar -->
+      <div id="find-bar">
+        <input type="text" id="find-input" placeholder="Find in page..." autocomplete="off" />
+        <span id="find-matches">0 / 0</span>
+        <button id="find-prev" title="Previous match">&#9650;</button>
+        <button id="find-next" title="Next match">&#9660;</button>
+        <button id="find-close" title="Close">&times;</button>
       </div>
     </div>
   </div>

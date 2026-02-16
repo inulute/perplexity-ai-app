@@ -123,7 +123,7 @@
   position: absolute;
   top: -5px;
   right: -5px;
-  background-color: #20808D;
+  background-color: #1E4D53;
   color: white;
   border-radius: 50%;
   font-size: 10px;
@@ -132,4 +132,63 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* Find Bar */
+#find-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 36px;
+  z-index: 1000;
+  display: none;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 6px;
+  padding: 0 12px;
+  background-color: #2B2C2D;
+  border-bottom: 1px solid #444;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+#find-bar.visible {
+  display: flex;
+}
+
+#find-input {
+  width: 200px;
+  padding: 5px 8px;
+  border: none;
+  border-radius: 4px;
+  background-color: #1e1f23;
+  color: #e0e0e0;
+  font-size: 13px;
+  outline: none;
+}
+
+#find-input:focus {
+  box-shadow: 0 0 0 1px #5BEBFF;
+}
+
+#find-matches {
+  color: #999;
+  font-size: 12px;
+  min-width: 50px;
+  text-align: center;
+}
+
+#find-bar button {
+  background: none;
+  border: none;
+  color: #ccc;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+
+#find-bar button:hover {
+  background-color: #444;
+  color: #fff;
 }

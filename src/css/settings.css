@@ -111,7 +111,7 @@ select {
 
 select:focus {
   outline: none;
-  box-shadow: 0 0 0 2px #20808D;
+  box-shadow: 0 0 0 2px #1E4D53;
 }
 
 .shortcut-item {
@@ -141,7 +141,7 @@ select:focus {
 
 .shortcut-input:focus {
   outline: none;
-  box-shadow: 0 0 0 2px #20808D;
+  box-shadow: 0 0 0 2px #1E4D53;
 }
 
 .shortcut-input:disabled {
@@ -172,7 +172,7 @@ select:focus {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #20808D; 
+  background-color: #1E4D53; 
   border-radius: 6px;
   transition: .3s;
   max-width: 70px; 
@@ -239,8 +239,8 @@ input[type="checkbox"]:not(:checked) + .toggle-slider {
 }
 
 .save-button:hover {
-  background-color: #20808D;
-  border-color: #20808D;
+  background-color: #1E4D53;
+  border-color: #1E4D53;
   color: #ffffff;
 }
 
@@ -328,7 +328,7 @@ input[type="checkbox"]:not(:checked) + .toggle-slider {
     }
     
     .instructions-button:hover {
-      background-color: #20808D;
+      background-color: #1E4D53;
       color: #fff;
     }
 

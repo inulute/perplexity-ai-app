@@ -147,10 +147,15 @@ document.addEventListener('DOMContentLoaded', () => {
       const autostartToggle = document.getElementById('toggle-autostart');
       if (autostartToggle) {
         autostartToggle.checked = data.autoStartEnabled || false;
-        
+
         autostartToggle.addEventListener('change', (event) => {
           window.electronAPI.toggleAutostart(event.target.checked);
         });
+      }
+
+      const closeToTrayToggle = document.getElementById('toggle-closeToTray');
+      if (closeToTrayToggle) {
+        closeToTrayToggle.checked = data.closeToTray !== false;
       }
     });
 
@@ -297,13 +302,16 @@ document.addEventListener('DOMContentLoaded', () => {
       if (checkForDuplicates(true)) {
         const autostartToggle = document.getElementById('toggle-autostart');
         
+        const closeToTrayToggle = document.getElementById('toggle-closeToTray');
+
         const settingsToSave = {
           shortcuts: newShortcuts,
           defaultAI: defaultAISelect.value,
-          disableHardwareAcceleration: document.getElementById('toggle-hardware-acceleration') 
-            ? document.getElementById('toggle-hardware-acceleration').checked 
+          disableHardwareAcceleration: document.getElementById('toggle-hardware-acceleration')
+            ? document.getElementById('toggle-hardware-acceleration').checked
             : false,
-          autoStartEnabled: autostartToggle ? autostartToggle.checked : false
+          autoStartEnabled: autostartToggle ? autostartToggle.checked : false,
+          closeToTray: closeToTrayToggle ? closeToTrayToggle.checked : true
         };
         window.electronAPI.setSettings(settingsToSave);
         savedShortcuts = { ...newShortcuts };
@@ -397,8 +405,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function getFriendlyName(key) {
       const nameMap = {
-        perplexityAI: 'Perplexity AI',
-        perplexityLabs: 'Perplexity Labs',
+        perplexityAI: 'AI Search',
+        perplexityLabs: 'AI Labs',
         sendToTray: 'Send to Tray',
         restoreApp: 'Restore App',
         quickSearch: 'Quick Search',
@@ -499,10 +507,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     
     initNavigationButtons();
-    
+
     initNotifications();
-    
+
     initQuickSearch();
+
+    initFindBar();
   }
 });
 
@@ -568,7 +578,7 @@ function initNotifications() {
 
 function initQuickSearch() {
   const searchButton = document.getElementById('search-button');
-  
+
   if (searchButton) {
     searchButton.addEventListener('click', () => {
       navigator.clipboard.readText()
@@ -584,4 +594,88 @@ function initQuickSearch() {
         });
     });
   }
+}
+
+function initFindBar() {
+  const findBar = document.getElementById('find-bar');
+  const findInput = document.getElementById('find-input');
+  const findMatches = document.getElementById('find-matches');
+  const findPrev = document.getElementById('find-prev');
+  const findNext = document.getElementById('find-next');
+  const findClose = document.getElementById('find-close');
+
+  if (!findBar || !findInput) return;
+
+  let isOpen = false;
+
+  function openFindBar() {
+    findBar.classList.add('visible');
+    window.electronAPI.findBarOpened();
+    findInput.focus();
+    findInput.select();
+    isOpen = true;
+  }
+
+  function closeFindBar() {
+    findBar.classList.remove('visible');
+    findInput.value = '';
+    findMatches.textContent = '0 / 0';
+    window.electronAPI.stopFindInPage('clearSelection');
+    window.electronAPI.findBarClosed();
+    isOpen = false;
+  }
+
+  // Listen for toggle from main process (Ctrl+F menu accelerator)
+  window.electronAPI.onToggleFindBar(() => {
+    if (isOpen) {
+      closeFindBar();
+    } else {
+      openFindBar();
+    }
+  });
+
+  // Live search as user types
+  findInput.addEventListener('input', () => {
+    const text = findInput.value;
+    if (text) {
+      window.electronAPI.findInPage(text, { forward: true });
+    } else {
+      window.electronAPI.stopFindInPage('clearSelection');
+      findMatches.textContent = '0 / 0';
+    }
+  });
+
+  // Keyboard navigation
+  findInput.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      closeFindBar();
+    }
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      if (e.shiftKey) {
+        window.electronAPI.findInPage(findInput.value, { forward: false });
+      } else {
+        window.electronAPI.findInPage(findInput.value, { forward: true });
+      }
+    }
+  });
+
+  findPrev.addEventListener('click', () => {
+    if (findInput.value) {
+      window.electronAPI.findInPage(findInput.value, { forward: false });
+    }
+  });
+
+  findNext.addEventListener('click', () => {
+    if (findInput.value) {
+      window.electronAPI.findInPage(findInput.value, { forward: true });
+    }
+  });
+
+  findClose.addEventListener('click', closeFindBar);
+
+  // Update match count from search results
+  window.electronAPI.onFindResult((result) => {
+    findMatches.textContent = `${result.activeMatchOrdinal} / ${result.matches}`;
+  });
 }

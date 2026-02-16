@@ -21,8 +21,8 @@
             Default AI Site:
           </label>
           <select id="defaultAI">
-            <option value="https://perplexity.ai">Perplexity AI Search</option>
-            <option value="https://labs.perplexity.ai">Perplexity AI Chat</option>
+            <option value="https://perplexity.ai">AI Search</option>
+            <option value="https://labs.perplexity.ai">AI Chat</option>
           </select>
         </div>
       </div>
@@ -37,6 +37,17 @@
           <span class="toggle-slider"></span>
         </label>
       </div>
+
+      <div class="setting-item">
+        <label for="closeToTray">
+          <img src="./assets/icons/svg/tray-icon.svg" alt="Close to Tray">
+          Close to Tray:
+        </label>
+        <label class="toggle-switch">
+          <input type="checkbox" id="toggle-closeToTray" class="toggle-checkbox" checked>
+          <span class="toggle-slider"></span>
+        </label>
+      </div>
       
       <div class="settings-section">
         <h3>Shortcuts</h3>
@@ -44,8 +55,8 @@
         
         <div class="shortcut-item">
           <label>
-            <img src="./assets/icons/svg/perplexity-ai-icon.svg" alt="Perplexity AI">
-            Perplexity AI:
+            <img src="./assets/icons/svg/perplexity-ai-icon.svg" alt="AI Search">
+            AI Search:
           </label>
           <input type="text" id="shortcut-perplexityAI" class="shortcut-input" readonly placeholder="Press keys..." required>
           <label class="toggle-switch">
@@ -56,8 +67,8 @@
         
         <div class="shortcut-item">
           <label>
-            <img src="./assets/icons/svg/perplexity-labs-icon.svg" alt="Perplexity Labs">
-            Perplexity Labs:
+            <img src="./assets/icons/svg/perplexity-labs-icon.svg" alt="AI Labs">
+            AI Labs:
           </label>
           <input type="text" id="shortcut-perplexityLabs" class="shortcut-input" readonly placeholder="Press keys..." required>
           <label class="toggle-switch">

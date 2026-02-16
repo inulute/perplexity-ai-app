@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ren:*)",
+      "Bash(ren perplexity-ai-icon.svg simplexity-ai-icon.svg)",
+      "Bash(ren perplexity-labs-icon.svg simplexity-labs-icon.svg)",
+      "Bash(dir /b \"E:\\\\GitHub\\\\perplexity-ai-app\")"
+    ]
+  }
+}

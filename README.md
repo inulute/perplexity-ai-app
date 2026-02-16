@@ -1,14 +1,14 @@
-<h1 align="center">🚀 Perplexity AI Desktop App 🖥️</h1>
+<h1 align="center">🚀 SimplexityAI - Unofficial Perplexity AI Desktop App 🖥️</h1>
 
 <div align="center">
-  <img src="./assets/icons/svg/perplexitybg.svg" alt="Perplexity AI Logo" width=450px>
+  <img src="./assets/icons/svg/simplexityaibg.svg" alt="SimplexityAI Logo" width=450px>
 
 </div>
 
 ---
 
  <p align="center">
-  A powerful, streamlined desktop application for Perplexity AI, providing seamless navigation between 🌐 <b>perplexity.ai</b> and 🧪 <b>labs.perplexity.ai</b> with enhanced features and an intuitive interface.
+  A powerful, streamlined desktop application providing seamless navigation between 🌐 <b>Perplexity AI</b> and 🧪 <b>Perplexity Labs</b> with enhanced features and an intuitive interface.
 </p>
 
 <p align="center">
@@ -19,25 +19,25 @@
   
 <div align="center">
   <br>
-  <img src="./assets/screenshots/perplexity_app.png" alt="App Screenshot" style="border-radius: 8px; box-shadow: 0 0 40px rgba(18, 131, 134, 0.47);">
+  <img src="./assets/screenshots/simplexityai_app.png" alt="App Screenshot" style="border-radius: 8px; box-shadow: 0 0 40px rgba(91, 235, 255, 0.47);">
   <br><br>
 </div>
 
 
 
 
-> [!NOTE]  
-> This is an Unofficial App - Not affiliated with Perplexity AI.
+> [!NOTE]
+> This is an Unofficial App. Not affiliated with Perplexity AI.
 
 ---
 
-## ⚡ Perplexity — v4.0.0
+## ⚡ SimplexityAI — v4.0.1
 
 A complete build focused on performance, usability, and integration.
 
 ```js
-/* What's new in v4.0.0 */
-await perplexity.evolve({
+/* What's new in v4.0.1 */
+await simplexityai.evolve({
   retainState: true,           // Persistent session memory
   systemTrayHibernation: true, // Minimize to system tray
   keyboardIntegration: true,   // Advanced shortcuts
@@ -93,7 +93,7 @@ await perplexity.evolve({
 
 ---
 
-<table>
+<!-- <table>
 <tr>
 <td><img src="./assets/screenshots/home_screen.png" alt="Screenshot 1" width="200"></td>
 <td><img src="./assets/screenshots/shortcuts_perplexity.png" alt="Screenshot 2" width="200"></td>
@@ -104,7 +104,7 @@ await perplexity.evolve({
 <td><em>Settings Panel</em></td>
 <td><em>Quick Search/Prefix Search</em></td>
 </tr>
-</table>
+</table> -->
 
 
 ---
@@ -171,8 +171,8 @@ await perplexity.evolve({
 
 ### 🎯 Auto-Detection Build (Recommended)
 ```
-git clone https://github.com/inulute/perplexity-ai-app
-cd perplexity-ai-app
+git clone https://github.com/inulute/simplexityai-app
+cd simplexityai-app
 npm run package-auto
 ```
 > Automatically detects your OS and builds the appropriate package format
@@ -186,5 +186,5 @@ npm run package-auto
 
 ---
 
- [!NOTE]  
-> <sub> This application is not affiliated with the official Perplexity AI project but is an independent effort to bring Perplexity AI to your desktop.</sub>
+ [!NOTE]
+> <sub> This is an independent desktop application for AI search.</sub>

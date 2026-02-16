@@ -31,5 +31,13 @@ contextBridge.exposeInMainWorld('electronAPI', {
 
   toggleAutostart: (enable) => ipcRenderer.send('toggle-autostart', enable),
   getAutostartStatus: () => ipcRenderer.invoke('get-autostart-status'),
-  onAutostartStatus: (callback) => ipcRenderer.on('autostart-status', (_, data) => callback(data))
+  onAutostartStatus: (callback) => ipcRenderer.on('autostart-status', (_, data) => callback(data)),
+
+  // Find bar
+  findInPage: (text, options) => ipcRenderer.send('find-in-page', text, options),
+  stopFindInPage: (action) => ipcRenderer.send('stop-find-in-page', action),
+  onFindResult: (callback) => ipcRenderer.on('find-result', (event, result) => callback(result)),
+  onToggleFindBar: (callback) => ipcRenderer.on('toggle-find-bar', () => callback()),
+  findBarOpened: () => ipcRenderer.send('find-bar-opened'),
+  findBarClosed: () => ipcRenderer.send('find-bar-closed')
 });

@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
  */
 function fetchReleaseNotes(version) {
   const owner = 'inulute'; 
-  const repo = 'perplexity-ai-app'; 
+  const repo = 'simplexityai-app';
   const branch = 'main'; 
 
   const rawUrl = `https://raw.githubusercontent.com/${owner}/${repo}/${branch}/release_notes/v${version}.md`;

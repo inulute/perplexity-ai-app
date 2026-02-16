@@ -13,7 +13,7 @@ Stay in the loop with **Inulute Projects** — updates, tips, and community chat
 ### Why join?
 
 - **App updates** — Be the first to know about new features and releases  
-- **Tips & shortcuts** — Get the most out of Perplexity AI and other tools  
+- **Tips & shortcuts** — Get the most out of SimplexityAI and other tools
 - **Support & feedback** — Share ideas and report issues directly  
 - **Community** — Connect with other users and the dev behind the app  
 
