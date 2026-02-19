@@ -2,7 +2,7 @@
 
 # 🚀 SimplexityAI
 
-### *Unofficial Perplexity AI Desktop App*
+### *Community-built Perplexity AI Desktop App*
 
 <img src="./assets/icons/svg/simplexityaibg.svg" alt="SimplexityAI Logo" width="500px">
 
@@ -407,7 +407,7 @@ Stay updated with the latest features, tips, and community discussions:
 This project is licensed under the **GNU General Public License v3.0**
 
 ```
-SimplexityAI - Unofficial Desktop Wrapper for Perplexity AI
+SimplexityAI - Community-built Desktop Wrapper for Perplexity AI
 Copyright (C) 2024-2026  Inulute
 
 This program is free software: you can redistribute it and/or modify
