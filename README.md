@@ -2,7 +2,7 @@
 
 # 🚀 SimplexityAI
 
-### *Community-built Perplexity AI Desktop App*
+### *Community-built P-lexity AI Desktop App*
 
 <img src="./assets/icons/svg/simplexityaibg.svg" alt="SimplexityAI Logo" width="500px">
 
@@ -12,7 +12,7 @@
 
 <br>
 
-**A powerful, feature-rich desktop app for accessing Perplexity AI's web service**
+**A powerful, feature-rich desktop app for accessing P-lexity AI's web service**
 *Built with ❤️ by the community, for the community*
 
 <br>
@@ -28,14 +28,14 @@
 > [!WARNING]
 > **SimplexityAI is an UNOFFICIAL, community-built desktop application.**
 >
-> - ❌ **NOT affiliated with, endorsed by, or connected to Perplexity AI, Inc.**
-> - ❌ **NOT an official product of Perplexity AI, Inc.**
+> - ❌ **NOT affiliated with, endorsed by, or connected to P-lexity AI, Inc.**
+> - ❌ **NOT an official product of P-lexity AI, Inc.**
 > - ✅ **Independent open-source project** built by developers for desktop convenience
-> - ✅ **Provides desktop wrapper features** for Perplexity's existing web service
+> - ✅ **Provides desktop wrapper features** for P-lexity's existing web service
 >
-> This application simply loads Perplexity AI's public website (perplexity.ai) in a native desktop container with added convenience features. All AI search functionality is powered by Perplexity AI's web service.
+> This application simply loads P-lexity AI's public website (P-lexity.ai) in a native desktop container with added convenience features. All AI search functionality is powered by P-lexity AI's web service.
 >
-> **Perplexity®** is a registered trademark of Perplexity AI, Inc. This project has no affiliation with them.
+> **P-lexity®** is a registered trademark of P-lexity AI, Inc. This project has no affiliation with them.
 
 ---
 
@@ -63,7 +63,7 @@ search from anywhere on your desktop
 
 ### 🔒 Native & Secure
 Electron-based, fully sandboxed,
-your data stays with Perplexity AI
+your data stays with P-lexity AI
 
 </td>
 </tr>
@@ -89,7 +89,7 @@ your data stays with Perplexity AI
 
 ### 🔍 **Enhanced Search Features**
 - **Integrated Find Bar** — Press Ctrl/Cmd+F to search within results
-- **Quick Navigation** — Seamlessly switch between Perplexity AI and Perplexity Labs
+- **Quick Navigation** — Seamlessly switch between P-lexity AI and P-lexity Labs
 - **One-Click Refresh** — Restart your session with a single click
 - **Zoom Controls** — Adjust text size with Ctrl +/- for better readability
 
@@ -102,11 +102,11 @@ your data stays with Perplexity AI
 - **No Data Collection** — SimplexityAI collects zero user data
 - **Sandboxed Environment** — Secure Electron architecture
 - **Local Settings** — All preferences stored locally on your device
-- **Direct to Perplexity** — All searches go directly to Perplexity AI's servers
+- **Direct to P-lexity** — All searches go directly to P-lexity AI's servers
 
 ### 🎨 **Modern UI**
 - **Custom Branding** — Unique SimplexityAI design (bright blue #5BEBFF theme)
-- **Dark Mode Native** — Respects Perplexity's dark theme
+- **Dark Mode Native** — Respects P-lexity's dark theme
 - **Minimal Sidebar** — Clean, distraction-free interface
 - **Smooth Animations** — Polished user experience
 
@@ -226,8 +226,8 @@ All shortcuts are **fully customizable** in Settings!
 |--------|---------------|-------|-------------|
 | **Quick Search** | `Alt+Shift+X` | `Cmd+Shift+X` | Search selected text from anywhere |
 | **Custom Prefix Search** | `Alt+Shift+D` | `Cmd+Shift+D` | Search with custom prefixes |
-| **Open Perplexity AI** | `Ctrl+1` | `Cmd+1` | Switch to Perplexity AI |
-| **Open Perplexity Labs** | `Ctrl+2` | `Cmd+2` | Switch to Perplexity Labs |
+| **Open P-lexity AI** | `Ctrl+1` | `Cmd+1` | Switch to P-lexity AI |
+| **Open P-lexity Labs** | `Ctrl+2` | `Cmd+2` | Switch to P-lexity Labs |
 | **Send to Tray** | `Alt+Shift+W` | `Cmd+T` | Minimize to system tray |
 | **Restore from Tray** | `Alt+Shift+Q` | `Cmd+Shift+T` | Restore app window |
 | **Find in Page** | `Ctrl+F` | `Cmd+F` | Search text on current page |
@@ -291,7 +291,7 @@ Access settings by clicking the ⚙️ icon in the sidebar.
 
 ### Available Settings:
 
-- **Default AI Site** — Choose which Perplexity service loads on startup (AI Search or Labs)
+- **Default AI Site** — Choose which P-lexity service loads on startup (AI Search or Labs)
 - **Auto-Start** — Enable/disable launch on system boot
 - **Close to Tray** — Choose whether X button minimizes to tray or quits app
 - **Keyboard Shortcuts** — Customize all global shortcuts
@@ -311,7 +311,7 @@ Access settings by clicking the ⚙️ icon in the sidebar.
 ### Architecture
 - **Main Process** — Native OS integration, window management
 - **Renderer Process** — UI rendering, user interactions
-- **BrowserView** — Embedded Perplexity AI web content
+- **BrowserView** — Embedded P-lexity AI web content
 - **IPC Communication** — Secure inter-process messaging
 
 ### System Requirements
@@ -407,7 +407,7 @@ Stay updated with the latest features, tips, and community discussions:
 This project is licensed under the **GNU General Public License v3.0**
 
 ```
-SimplexityAI - Community-built Desktop Wrapper for Perplexity AI
+SimplexityAI - Community-built Desktop Wrapper for P-lexity AI
 Copyright (C) 2024-2026  Inulute
 
 This program is free software: you can redistribute it and/or modify
@@ -429,7 +429,7 @@ See [LICENSE](LICENSE) for full details.
 - ✅ **No telemetry or tracking** — SimplexityAI collects zero user data
 - ✅ **No ads or analytics** — Completely clean experience
 - ✅ **Local-only settings** — All preferences stored on your device
-- ✅ **Direct to Perplexity** — Searches go straight to Perplexity AI's servers
+- ✅ **Direct to P-lexity** — Searches go straight to P-lexity AI's servers
 - ✅ **Open source** — Fully transparent, auditable code
 
 ---
@@ -437,27 +437,27 @@ See [LICENSE](LICENSE) for full details.
 ## ❓ FAQ
 
 <details>
-<summary><strong>Q: Is this affiliated with Perplexity AI, Inc.?</strong></summary>
+<summary><strong>Q: Is this affiliated with P-lexity AI, Inc.?</strong></summary>
 <br>
-<b>A: No.</b> SimplexityAI is an independent, unofficial, community-built desktop wrapper. It is NOT affiliated with, endorsed by, or connected to Perplexity AI, Inc. in any way.
+<b>A: No.</b> SimplexityAI is an independent, unofficial, community-built desktop wrapper. It is NOT affiliated with, endorsed by, or connected to P-lexity AI, Inc. in any way.
 </details>
 
 <details>
 <summary><strong>Q: How does SimplexityAI work?</strong></summary>
 <br>
-<b>A:</b> SimplexityAI is a desktop application that loads Perplexity AI's public website (perplexity.ai) in an embedded browser view. All search functionality is powered by Perplexity AI's web service. We add desktop-specific features like system tray, global shortcuts, and persistent sessions.
+<b>A:</b> SimplexityAI is a desktop application that loads P-lexity AI's public website (P-lexity.ai) in an embedded browser view. All search functionality is powered by P-lexity AI's web service. We add desktop-specific features like system tray, global shortcuts, and persistent sessions.
 </details>
 
 <details>
-<summary><strong>Q: Do I need a Perplexity account?</strong></summary>
+<summary><strong>Q: Do I need a P-lexity account?</strong></summary>
 <br>
-<b>A:</b> SimplexityAI works with both free and premium Perplexity accounts. You can use it without an account for basic searches, or sign in for full Perplexity Pro features (if you have a subscription).
+<b>A:</b> SimplexityAI works with both free and premium P-lexity accounts. You can use it without an account for basic searches, or sign in for full P-lexity Pro features (if you have a subscription).
 </details>
 
 <details>
 <summary><strong>Q: Is my data safe?</strong></summary>
 <br>
-<b>A:</b> Yes! SimplexityAI doesn't collect any user data. All your searches and interactions go directly to Perplexity AI's servers. Your settings are stored locally on your device.
+<b>A:</b> Yes! SimplexityAI doesn't collect any user data. All your searches and interactions go directly to P-lexity AI's servers. Your settings are stored locally on your device.
 </details>
 
 <details>
@@ -475,7 +475,7 @@ See [LICENSE](LICENSE) for full details.
 <details>
 <summary><strong>Q: Does this work offline?</strong></summary>
 <br>
-<b>A:</b> No. SimplexityAI requires an internet connection since it accesses Perplexity AI's web service. The app itself can run offline, but you won't be able to perform searches.
+<b>A:</b> No. SimplexityAI requires an internet connection since it accesses P-lexity AI's web service. The app itself can run offline, but you won't be able to perform searches.
 </details>
 
 <details>
@@ -488,7 +488,7 @@ See [LICENSE](LICENSE) for full details.
 
 ## 🙏 Acknowledgments
 
-- **Perplexity AI** — For creating an amazing AI search service (this is just a desktop wrapper!)
+- **P-lexity AI** — For creating an amazing AI search service (this is just a desktop wrapper!)
 - **Electron** — For the cross-platform desktop framework
 - **Open Source Community** — For all the amazing libraries and tools
 - **Contributors** — Everyone who has helped improve this project
@@ -516,6 +516,6 @@ See [LICENSE](LICENSE) for full details.
 
 **SimplexityAI** • [Website](https://simplexity.inulute.com) • [Download on Pling](https://www.pling.com/p/2107698/) • [GitHub](https://github.com/inulute/simplexity-ai-app) • [Support](https://support.inulute.com)
 
-<sub>Not affiliated with Perplexity AI, Inc. • Independent open-source project</sub>
+<sub>Not affiliated with any AI, INC. • Independent open-source project</sub>
 
 </div>
