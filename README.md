@@ -4,7 +4,7 @@
 
 ### *Community-built P-lexity AI Desktop App*
 
-<!-- <img src="./assets/icons/svg/simplexityaibg.svg" alt="SimplexityAI Logo" width="500px"> -->
+<img src="./assets/icons/svg/simplexityaibg.svg" alt="SimplexityAI Logo" width="500px">
 
 [![Download Latest](https://img.shields.io/badge/Download-Latest-5BEBFF?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48cGF0aCBkPSJNMjEgMTV2NGEyIDIgMCAwIDEtMiAySDVhMiAyIDAgMCAxLTItMnYtNCIvPjxwb2x5bGluZSBwb2ludHM9IjcgMTAgMTIgMTUgMTcgMTAiLz48bGluZSB4MT0iMTIiIHkxPSIxNSIgeDI9IjEyIiB5Mj0iMyIvPjwvc3ZnPg==)](https://www.pling.com/p/2107698/)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg?style=for-the-badge)](https://www.gnu.org/licenses/gpl-3.0)
@@ -17,7 +17,7 @@
 
 <br>
 
-<img src="./assets/screenshots/simplexityai_app.png" alt="SimplexityAI Interface" style="border-radius: 12px; box-shadow: 0 8px 40px rgba(91, 235, 255, 0.3);" width="800px">
+<!-- <img src="./assets/screenshots/simplexityai_app.png" alt="SimplexityAI Interface" style="border-radius: 12px; box-shadow: 0 8px 40px rgba(91, 235, 255, 0.3);" width="800px"> -->
 
 </div>
 
